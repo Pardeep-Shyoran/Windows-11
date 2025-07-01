@@ -48,7 +48,7 @@ body.dark-mode {
 	--widget-bar-bg: rgba(31, 31, 31, 0.25);
 	--app-window-bg1: #191919;
 	--app-window-bg2: #1c1c1c;
-	--bg-image: url("./assets/Img1.jpg");
+	--bg-image: url("./assets/img1.jpg");
 }
 * {
 	padding: 0;
