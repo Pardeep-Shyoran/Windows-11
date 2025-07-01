@@ -28,7 +28,7 @@
 	--widget-bar-bg: rgba(234, 234, 234, 0.25);
 	--app-window-bg1: #ffffff;
 	--app-window-bg2: #f5f5f5;
-	--bg-image: url("./assets/Img0.jpg");
+	--bg-image: url("./assets/Img1.jpg");
 }
 
 body.dark-mode {
@@ -48,7 +48,7 @@ body.dark-mode {
 	--widget-bar-bg: rgba(31, 31, 31, 0.25);
 	--app-window-bg1: #191919;
 	--app-window-bg2: #1c1c1c;
-	--bg-image: url("./assets/Img1.jpg");
+	--bg-image: url("./assets/Img0.jpg");
 }
 * {
 	padding: 0;
