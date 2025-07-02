@@ -1224,7 +1224,6 @@
 					<div class="top-apps-heading">Top Apps</div>
 
 					<div class="top-apps">
-
 						<div
 							data-app="explorer"
 							data-icon="assets/explorer.png"
@@ -1413,819 +1412,899 @@
 				</div>
 			</div>
 
-			<div
-				id="window-terminal"
-				class="app-window hidden"
-				data-app="terminal"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/terminal.png" alt="" />
+			<div class="all-apps">
+				<div
+					id="window-terminal"
+					class="app-window hidden"
+					data-app="terminal"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/terminal.png" alt="" />
+							</div>
+							<div class="app-window-name">Terminal</div>
 						</div>
-						<div class="app-window-name">Terminal</div>
-					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
-					</div>
-				</div>
-				<div id="terminal">
-					<div class="terminal-intro">
-						<div>🌹 Welcome to Terminal 🌹</div>
-						<div>🌹 Created by Pardeep Shyoran 🌹</div>
-						<div>Type `help`, to view all commands...</div>
-					</div>
-					<div id="output"></div>
-					<div id="input-line">
-						<span class="prompt">$</span>
-						<input type="text" id="input" autofocus />
-					</div>
-				</div>
-
-				<!-- Add this inside the <body>, after the terminal -->
-				<div id="editor-modal" style="display: none">
-					<div
-						style="
-							background: black;
-							color: white;
-							padding: 10px;
-							border: 1px solid lime;
-						"
-					>
-						<h3>Edit File: <span id="editor-filename"></span></h3>
-						<textarea
-							id="editor-textarea"
-							style="width: 100%; height: 150px"
-						></textarea>
-						<br />
-						<button onclick="saveEdit()">Save</button>
-						<button onclick="cancelEdit()">Cancel</button>
-					</div>
-				</div>
-			</div>
-
-			<div
-				id="window-recycle-bin"
-				class="app-window hidden"
-				data-app="recycle-bin"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/bin0.png" alt="" />
-						</div>
-						<div class="app-window-name">Recycle Bin</div>
-					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="explorer-body" style="display: flex; height: 100%">
-					<!-- Left Sidebar -->
-					<div
-						id="explorer-sidebar"
-						style="
-							width: 200px;
-							border-right: 1px solid gray;
-							padding: 10px;
-						"
-					>
-						<h3 style="margin-top: 0">Quick Access</h3>
-						<ul id="quick-access">
-							<li class="explorer-sidebar-li" data-path="/">
-								<div class="explorer-sidebar-icon">
-									<img src="assets/bin0.png" alt="" />
-								</div>
-								<div class="explorer-sidebar-name">
-									Recycle Bin
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<!-- Right Content Panel -->
-					<div
-						id="recycle-bin-content"
-						style="flex: 1; padding: 10px"
-					>
-						<div id="recycle-bin-path" style="margin-bottom: 10px">
-							/
-						</div>
-						<ul id="recycle-bin-list">
-							Recycle Bin
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div
-				id="window-explorer"
-				class="app-window hidden"
-				data-app="explorer"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/explorer.png" alt="" />
-						</div>
-						<div class="app-window-name">File Explorer</div>
-					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="explorer-body" style="display: flex; height: 100%">
-					<!-- Left Sidebar -->
-					<div
-						id="explorer-sidebar"
-						style="
-							width: 200px;
-							border-right: 1px solid gray;
-							padding: 10px;
-						"
-					>
-						<h3 style="margin-top: 0">Quick Access</h3>
-						<ul id="quick-access">
-							<li
-								class="explorer-sidebar-li"
-								data-path="/home/user/desktop"
-							>
-								<div class="explorer-sidebar-icon">
-									<img src="assets/desk-sm.png" alt="" />
-								</div>
-								<div class="explorer-sidebar-name">Desktop</div>
-							</li>
-							<li
-								class="explorer-sidebar-li"
-								data-path="/home/user/documents"
-							>
-								<div class="explorer-sidebar-icon">
-									<img src="assets/docs-sm.png" alt="" />
-								</div>
-								<div class="explorer-sidebar-name">
-									Documents
-								</div>
-							</li>
-							<li
-								class="explorer-sidebar-li"
-								data-path="/home/user/downloads"
-							>
-								<div class="explorer-sidebar-icon">
-									<img src="assets/down-sm.png" alt="" />
-								</div>
-								<div class="explorer-sidebar-name">
-									Downloads
-								</div>
-							</li>
-							<li
-								class="explorer-sidebar-li"
-								data-path="/home/user/pictures"
-							>
-								<div class="explorer-sidebar-icon">
-									<img src="assets/pics-sm.png" alt="" />
-								</div>
-								<div class="explorer-sidebar-name">
-									Pictures
-								</div>
-							</li>
-							<li
-								class="explorer-sidebar-li"
-								data-path="/home/user/music"
-							>
-								<div class="explorer-sidebar-icon">
-									<img src="assets/music-sm.png" alt="" />
-								</div>
-								<div class="explorer-sidebar-name">Music</div>
-							</li>
-						</ul>
-					</div>
-
-					<!-- Right Content Panel -->
-					<div id="explorer-content" style="flex: 1; padding: 10px">
-						<div id="explorer-path" style="margin-bottom: 10px">
-							/
-						</div>
-						<div style="margin-bottom: 10px">
-							<button
-								id="new-folder-btn"
-								style="
-									padding: 5px 10px;
-									background-color: #0078d7;
-									color: white;
-									border: none;
-									border-radius: 3px;
-									cursor: pointer;
-								"
-							>
-								➕ New Folder
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
 							</button>
-							<button
-								id="new-file-btn"
-								style="
-									padding: 5px 10px;
-									background-color: #0078d7;
-									color: white;
-									border: none;
-									border-radius: 3px;
-									cursor: pointer;
-								"
-							>
-								➕ New File
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
 							</button>
 						</div>
-						<ul id="explorer-list"></ul>
 					</div>
-				</div>
-			</div>
-
-			<div id="window-edge" class="app-window hidden" data-app="edge">
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/edge.png" alt="" />
+					<div id="terminal">
+						<div class="terminal-intro">
+							<div>🌹 Welcome to Terminal 🌹</div>
+							<div>🌹 Created by Pardeep Shyoran 🌹</div>
+							<div>Type `help`, to view all commands...</div>
 						</div>
-						<div class="app-window-name">Microsoft Edge</div>
-					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="browser-body" id="mainView">
-					<div class="search-header">
-						<input
-							class="browser-search-bar"
-							type="text"
-							id="query"
-							placeholder="Search here..."
-						/>
-						<button class="browser-search-btn" onclick="search()">
-							Search
-						</button>
-					</div>
-
-					<div id="loader" class="loader" style="display: none"></div>
-
-					<div class="browser-results" id="resultsContainer"></div>
-
-					<div class="pagination">
-						<button onclick="changePage(-1)" id="prevBtn" disabled>
-							Previous
-						</button>
-						<button onclick="changePage(1)" id="nextBtn" disabled>
-							Next
-						</button>
-					</div>
-				</div>
-
-				<div id="iframeView" style="display: none">
-					<button class="go-back-btn" onclick="goBack()">
-						← Back to results
-					</button>
-					<iframe id="internalIframe"></iframe>
-				</div>
-
-				<!-- <div class="gcse-search"></div> -->
-			</div>
-
-			<div id="window-store" class="app-window hidden" data-app="store">
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/store.png" alt="" />
+						<div id="output"></div>
+						<div id="input-line">
+							<span class="prompt">$</span>
+							<input type="text" id="input" autofocus />
 						</div>
-						<div class="app-window-name">Microsoft Store</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Microsoft Store</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div id="window-github" class="app-window hidden" data-app="github">
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/github.png" alt="" />
+					<!-- Add this inside the <body>, after the terminal -->
+					<div id="editor-modal" style="display: none">
+						<div
+							style="
+								background: black;
+								color: white;
+								padding: 10px;
+								border: 1px solid lime;
+							"
+						>
+							<h3>
+								Edit File: <span id="editor-filename"></span>
+							</h3>
+							<textarea
+								id="editor-textarea"
+								style="width: 100%; height: 150px"
+							></textarea>
+							<br />
+							<button onclick="saveEdit()">Save</button>
+							<button onclick="cancelEdit()">Cancel</button>
 						</div>
-						<div class="app-window-name">GitHub</div>
-					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
 					</div>
 				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Github</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div
-				id="window-notepad"
-				class="app-window hidden"
-				data-app="notepad"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/notepad.png" alt="" />
+				<div
+					id="window-recycle-bin"
+					class="app-window hidden"
+					data-app="recycle-bin"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/bin0.png" alt="" />
+							</div>
+							<div class="app-window-name">Recycle Bin</div>
 						</div>
-						<div class="app-window-name">Notepad</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="notepad-body">
-					<div class="notepad-toolbar">
-						<button id="newFile">New</button>
-						<button id="renameFile">Rename</button>
-						<button id="deleteFile">Delete</button>
-						<button id="saveNote">Save</button>
-						<button id="clearNote">Clear</button>
-					</div>
-					<div class="notepad-format-toolbar">
-						<button data-cmd="bold"><b>B</b></button>
-						<button data-cmd="italic"><i>I</i></button>
-						<button data-cmd="underline"><u>U</u></button>
-						<button data-cmd="formatBlock" data-value="h1">
-							H1
-						</button>
-						<button data-cmd="formatBlock" data-value="p">P</button>
-
-						<!-- Font Size Dropdown -->
-						<select id="fontSizeSelector">
-							<option value="1">Size 1</option>
-							<option value="2">Size 2</option>
-							<option value="3" selected>Size 3 (default)</option>
-							<option value="4">Size 4</option>
-							<option value="5">Size 5</option>
-							<option value="6">Size 6</option>
-							<option value="7">Size 7</option>
-						</select>
-
-						<!-- Text Color Picker -->
-						<input
-							type="color"
-							id="textColorPicker"
-							title="Text Color"
-						/>
-					</div>
-
 					<div
-						id="notepadContent"
-						class="editable"
-						contenteditable="true"
-						placeholder="Start typing..."
-					></div>
+						class="explorer-body"
+						style="display: flex; height: 100%"
+					>
+						<!-- Left Sidebar -->
+						<div
+							id="explorer-sidebar"
+							style="
+								width: 200px;
+								border-right: 1px solid gray;
+								padding: 10px;
+							"
+						>
+							<h3 style="margin-top: 0">Quick Access</h3>
+							<ul id="quick-access">
+								<li class="explorer-sidebar-li" data-path="/">
+									<div class="explorer-sidebar-icon">
+										<img src="assets/bin0.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Recycle Bin
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Right Content Panel -->
+						<div
+							id="recycle-bin-content"
+							style="flex: 1; padding: 10px"
+						>
+							<div
+								id="recycle-bin-path"
+								style="margin-bottom: 10px"
+							>
+								/
+							</div>
+							<ul id="recycle-bin-list">
+								Recycle Bin
+							</ul>
+						</div>
+					</div>
 				</div>
 
-				<!-- <div id="window-about-app" class="app-window hidden">
+				<div
+					id="window-explorer"
+					class="app-window hidden"
+					data-app="explorer"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/explorer.png" alt="" />
+							</div>
+							<div class="app-window-name">File Explorer</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div
+						class="explorer-body"
+						style="display: flex; height: 100%"
+					>
+						<!-- Left Sidebar -->
+						<div
+							id="explorer-sidebar"
+							style="
+								width: 200px;
+								border-right: 1px solid gray;
+								padding: 10px;
+							"
+						>
+							<h3 style="margin-top: 0">Quick Access</h3>
+							<ul id="quick-access">
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/desktop"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/desk-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Desktop
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/documents"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/docs-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Documents
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/downloads"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/down-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Downloads
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/pictures"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/pics-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Pictures
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/music"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/music-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Music
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Right Content Panel -->
+						<div
+							id="explorer-content"
+							style="flex: 1; padding: 10px"
+						>
+							<div id="explorer-path" style="margin-bottom: 10px">
+								/
+							</div>
+							<div style="margin-bottom: 10px">
+								<button
+									id="new-folder-btn"
+									style="
+										padding: 5px 10px;
+										background-color: #0078d7;
+										color: white;
+										border: none;
+										border-radius: 3px;
+										cursor: pointer;
+									"
+								>
+									➕ New Folder
+								</button>
+								<button
+									id="new-file-btn"
+									style="
+										padding: 5px 10px;
+										background-color: #0078d7;
+										color: white;
+										border: none;
+										border-radius: 3px;
+										cursor: pointer;
+									"
+								>
+									➕ New File
+								</button>
+							</div>
+							<ul id="explorer-list"></ul>
+						</div>
+					</div>
+				</div>
+
+				<div id="window-edge" class="app-window hidden" data-app="edge">
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/edge.png" alt="" />
+							</div>
+							<div class="app-window-name">Microsoft Edge</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="browser-body" id="mainView">
+						<div class="search-header">
+							<input
+								class="browser-search-bar"
+								type="text"
+								id="query"
+								placeholder="Search here..."
+							/>
+							<button
+								class="browser-search-btn"
+								onclick="search()"
+							>
+								Search
+							</button>
+						</div>
+
+						<div
+							id="loader"
+							class="loader"
+							style="display: none"
+						></div>
+
+						<div
+							class="browser-results"
+							id="resultsContainer"
+						></div>
+
+						<div class="pagination">
+							<button
+								onclick="changePage(-1)"
+								id="prevBtn"
+								disabled
+							>
+								Previous
+							</button>
+							<button
+								onclick="changePage(1)"
+								id="nextBtn"
+								disabled
+							>
+								Next
+							</button>
+						</div>
+					</div>
+
+					<div id="iframeView" style="display: none">
+						<button class="go-back-btn" onclick="goBack()">
+							← Back to results
+						</button>
+						<iframe id="internalIframe"></iframe>
+					</div>
+
+					<!-- <div class="gcse-search"></div> -->
+				</div>
+
+				<div
+					id="window-store"
+					class="app-window hidden"
+					data-app="store"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/store.png" alt="" />
+							</div>
+							<div class="app-window-name">Microsoft Store</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Microsoft Store</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-github"
+					class="app-window hidden"
+					data-app="github"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/github.png" alt="" />
+							</div>
+							<div class="app-window-name">GitHub</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Github</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-notepad"
+					class="app-window hidden"
+					data-app="notepad"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/notepad.png" alt="" />
+							</div>
+							<div class="app-window-name">Notepad</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="notepad-body">
+						<div class="notepad-toolbar">
+							<button id="newFile">New</button>
+							<button id="renameFile">Rename</button>
+							<button id="deleteFile">Delete</button>
+							<button id="saveNote">Save</button>
+							<button id="clearNote">Clear</button>
+						</div>
+						<div class="notepad-format-toolbar">
+							<button data-cmd="bold"><b>B</b></button>
+							<button data-cmd="italic"><i>I</i></button>
+							<button data-cmd="underline"><u>U</u></button>
+							<button data-cmd="formatBlock" data-value="h1">
+								H1
+							</button>
+							<button data-cmd="formatBlock" data-value="p">
+								P
+							</button>
+
+							<!-- Font Size Dropdown -->
+							<select id="fontSizeSelector">
+								<option value="1">Size 1</option>
+								<option value="2">Size 2</option>
+								<option value="3" selected>
+									Size 3 (default)
+								</option>
+								<option value="4">Size 4</option>
+								<option value="5">Size 5</option>
+								<option value="6">Size 6</option>
+								<option value="7">Size 7</option>
+							</select>
+
+							<!-- Text Color Picker -->
+							<input
+								type="color"
+								id="textColorPicker"
+								title="Text Color"
+							/>
+						</div>
+
+						<div
+							id="notepadContent"
+							class="editable"
+							contenteditable="true"
+							placeholder="Start typing..."
+						></div>
+					</div>
+
+					<!-- <div id="window-about-app" class="app-window hidden">
 				<button onclick="this.parentElement.style.display='none'">X</button>
 				<h2>About</h2>
 				<p>This is created by Pardeep Shyoran.</p>
 			</div> -->
-			</div>
+				</div>
 
-			<div
-				id="window-settings"
-				class="app-window hidden"
-				data-app="settings"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/settings.png" alt="" />
+				<div
+					id="window-settings"
+					class="app-window hidden"
+					data-app="settings"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/settings.png" alt="" />
+							</div>
+							<div class="app-window-name">Settings</div>
 						</div>
-						<div class="app-window-name">Settings</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
+					<!-- <div class="app-body">
+						<div class="window-app-heading">Settings</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div> -->
+					<div class="settings-body">
+						<div class="mul-wallpapers">
+							<div class="wallpaper wallpaper-1">
+								<img src="assets/Img0.jpg" alt="">
+							</div>
+							<div class="wallpaper wallpaper-2">
+								<img src="assets/img1.jpg" alt="">
+							</div>
+							<div class="wallpaper wallpaper-3">
+								<img src="assets/img2.jpg" alt="">
+							</div>
+							<div class="wallpaper wallpaper-4">
+								<img src="assets/img3.jpg" alt="">
+							</div>
+							<div class="wallpaper wallpaper-5">
+								<img src="assets/img4.jpg" alt="">
+							</div>
+							<div class="wallpaper wallpaper-6">
+								<img src="assets/img5.jpg" alt="">
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Settings</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div
-				id="window-calculator"
-				class="app-window hidden"
-				data-app="calculator"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/calculator.png" alt="" />
+				<div
+					id="window-calculator"
+					class="app-window hidden"
+					data-app="calculator"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/calculator.png" alt="" />
+							</div>
+							<div class="app-window-name">Calculator</div>
 						</div>
-						<div class="app-window-name">Calculator</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
+					<div class="app-body">
+						<div class="window-app-heading">Calculator</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
 					</div>
 				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Calculator</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div id="window-mail" class="app-window hidden" data-app="mail">
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/mail.png" alt="" />
+				<div id="window-mail" class="app-window hidden" data-app="mail">
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/mail.png" alt="" />
+							</div>
+							<div class="app-window-name">Mail</div>
 						</div>
-						<div class="app-window-name">Mail</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
+					<div class="app-body">
+						<div class="window-app-heading">Mail</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
 					</div>
 				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Mail</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div
-				id="window-taskmanager"
-				class="app-window hidden"
-				data-app="taskmanager"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/taskmanager.png" alt="" />
+				<div
+					id="window-taskmanager"
+					class="app-window hidden"
+					data-app="taskmanager"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/taskmanager.png" alt="" />
+							</div>
+							<div class="app-window-name">Task Manager</div>
 						</div>
-						<div class="app-window-name">Task Manager</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
+					<div class="app-body">
+						<div class="window-app-heading">Task Manager</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
 					</div>
 				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Task Manager</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div id="window-board" class="app-window hidden" data-app="board">
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/board.png" alt="" />
+				<div
+					id="window-board"
+					class="app-window hidden"
+					data-app="board"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/board.png" alt="" />
+							</div>
+							<div class="app-window-name">White Board</div>
 						</div>
-						<div class="app-window-name">White Board</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
+					<div class="app-body">
+						<div class="window-app-heading">White Board</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
 					</div>
 				</div>
-				<div class="app-body">
-					<div class="window-app-heading">White Board</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div
-				id="window-getstarted"
-				class="app-window hidden"
-				data-app="getstarted"
-			>
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/getstarted.png" alt="" />
+				<div
+					id="window-getstarted"
+					class="app-window hidden"
+					data-app="getstarted"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/getstarted.png" alt="" />
+							</div>
+							<div class="app-window-name">Get Started</div>
 						</div>
-						<div class="app-window-name">Get Started</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
+					<div class="app-body">
+						<div class="window-app-heading">Get Started</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
 					</div>
 				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Get Started</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<div id="window-camera" class="app-window hidden" data-app="camera">
-				<div class="app-window-header">
-					<div class="app-window-main">
-						<div class="app-window-icon">
-							<img src="assets/camera.png" alt="" />
+				<div
+					id="window-camera"
+					class="app-window hidden"
+					data-app="camera"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/camera.png" alt="" />
+							</div>
+							<div class="app-window-name">Camera</div>
 						</div>
-						<div class="app-window-name">Camera</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
 					</div>
-					<div class="app-window-btn">
-						<button class="minimise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/minimize.png"
-								alt=""
-							/>
-						</button>
-						<button class="maximise-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/maxmin.png"
-								alt=""
-							/>
-						</button>
-						<button class="close-btn window-btns">
-							<img
-								class="theme-sensitive window-btn"
-								src="assets/close.png"
-								alt=""
-							/>
-						</button>
-					</div>
-				</div>
-				<div class="app-body">
-					<div class="window-app-heading">Camera</div>
-					<div class="coming-soon-img">
-						<img src="assets/coming-soon.png" alt="" />
+					<div class="app-body">
+						<div class="window-app-heading">Camera</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
 					</div>
 				</div>
 			</div>
