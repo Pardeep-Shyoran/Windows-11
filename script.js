@@ -387,6 +387,7 @@ function updateSliderFill(slider) {
 	const val = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
 	slider.style.background = `linear-gradient(to right, #4285f4 0%, #4285f4 ${val}%, #ccc ${val}%, #ccc 100%)`;
 }
+
 // Initialize fill
 [brightnessSlider, volumeSlider].forEach((slider) => {
 	updateSliderFill(slider);
@@ -1229,38 +1230,6 @@ input.addEventListener("keydown", function (e) {
 	}
 });
 
-renderCalender();
-
-// Initial call
-updateClock();
-
-// Update every second
-setInterval(updateClock, 1000);
-
-// Initial call
-updateWidgetClock();
-
-// Update every second
-setInterval(updateWidgetClock, 1000);
-
-// renderExplorer();
-// renderDesktopFiles();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function renderDocx(base64Docx, container) {
 	const byteArray = Uint8Array.from(atob(base64Docx), (c) => c.charCodeAt(0));
@@ -1297,9 +1266,6 @@ function renderPDF(base64Pdf, container) {
 			console.error(err);
 		});
 }
-
-
-
 
 // 🧠 Formatting logic
 document.querySelectorAll(".notepad-format-toolbar button").forEach((btn) => {
@@ -1368,6 +1334,7 @@ document.getElementById("saveNote").addEventListener("click", () => {
 		alert(`Saved: ${name}`);
 	}
 });
+
 document.getElementById("renameFile").addEventListener("click", () => {
 	if (!notepadOpenFile) {
 		alert("No file is open.");
@@ -1390,6 +1357,7 @@ document.getElementById("renameFile").addEventListener("click", () => {
 	renderExplorer();
 	alert(`Renamed to ${newName}`);
 });
+
 document.getElementById("deleteFile").addEventListener("click", () => {
 	if (!notepadOpenFile) {
 		alert("No file is open.");
@@ -1416,7 +1384,6 @@ document.getElementById("clearNote").addEventListener("click", () => {
 	if (contentDiv) contentDiv.innerHTML = "";
 });
 
-
 function createNewTextFileAndOpenNotepad() {
 	const path = ["/", "home", "user", "documents"];
 	const folder = getNode(path);
@@ -1436,9 +1403,7 @@ function createNewTextFileAndOpenNotepad() {
 	folder[newName] = ""; // Create empty text file
 
 	const contentDiv = document.getElementById("notepadContent");
-if (contentDiv) contentDiv.innerHTML = "";
-
-	
+	if (contentDiv) contentDiv.innerHTML = "";
 
 	notepadOpenFile = {
 		path,
@@ -1487,7 +1452,6 @@ function createNewTextFileInNotepad() {
 	const contentDiv = document.getElementById("notepadContent");
 	if (contentDiv) contentDiv.innerHTML = "";
 
-
 	// Optional: update filename UI
 	const fileNameDisplay = document.getElementById("notepad-filename");
 	if (fileNameDisplay) fileNameDisplay.textContent = newName;
@@ -1496,35 +1460,26 @@ function createNewTextFileInNotepad() {
 	renderExplorer?.();
 }
 
-function makeDesktopIconsDraggable() {
-	const icons = document.querySelectorAll(".desktop-app");
 
-	icons.forEach(icon => {
-		icon.addEventListener("mousedown", startDrag);
+renderCalender();
 
-		let offsetX, offsetY, draggedEl;
+// Initial call
+updateClock();
 
-		function startDrag(e) {
-			draggedEl = icon;
-			const rect = draggedEl.getBoundingClientRect();
-			offsetX = e.clientX - rect.left;
-			offsetY = e.clientY - rect.top;
+// Update every second
+setInterval(updateClock, 1000);
 
-			document.addEventListener("mousemove", dragMove);
-			document.addEventListener("mouseup", stopDrag);
-		}
+// Initial call
+updateWidgetClock();
 
-		function dragMove(e) {
-			if (!draggedEl) return;
+// Update every second
+setInterval(updateWidgetClock, 1000);
 
-			draggedEl.style.left = `${e.clientX - offsetX}px`;
-			draggedEl.style.top = `${e.clientY - offsetY}px`;
-		}
+// renderExplorer();
+// renderDesktopFiles();
 
-		function stopDrag() {
-			document.removeEventListener("mousemove", dragMove);
-			document.removeEventListener("mouseup", stopDrag);
-			draggedEl = null;
-		}
-	});
-}
+
+
+
+
+

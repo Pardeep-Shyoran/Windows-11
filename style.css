@@ -29,6 +29,9 @@
 	--app-window-bg1: #ffffff;
 	--app-window-bg2: #f5f5f5;
 	--bg-image: url("./assets/Img0.jpg");
+	--home-menu-bg1: rgba(242, 242, 242, .9);
+	--home-menu-bg2: rgba(0, 0, 0, .033);
+	--home-hov-bg: rgba(255, 255, 255, .9);
 }
 
 body.dark-mode {
@@ -49,6 +52,9 @@ body.dark-mode {
 	--app-window-bg1: #191919;
 	--app-window-bg2: #1c1c1c;
 	--bg-image: url("./assets/img1.jpg");
+	--home-menu-bg1: rgba(36, 36, 36, 0.95);
+	--home-menu-bg2: rgba(0, 0, 0, .15);
+	--home-hov-bg: rgba(255, 255, 255, .1);
 }
 * {
 	padding: 0;
@@ -787,10 +793,31 @@ input[type="range"]::-ms-thumb {
 	justify-content: center;
 }
 
+.home-full-view-header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 3rem 1rem;
+	color: var(--alt-txt);
+}
+
+.home-view-header-heading{
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.home-view-header-app-btn{
+	font-size: 12px;
+	padding: 2px 4px;
+	border-radius: 2px;
+	background-color: var(--home-hov-bg);
+	cursor: pointer;
+}
+
 .home-full-view {
 	width: 40rem;
 	height: 42rem;
-	background-color: var(--comp-txt);
+	background-color: var(--home-menu-bg1);
 	position: absolute;
 	border-radius: 10px;
 	left: 50%;
@@ -798,13 +825,131 @@ input[type="range"]::-ms-thumb {
 	bottom: -100%;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 	transition: 0.2s;
-	/* visibility: hidden; */
+	backdrop-filter: blur(10px);
+	display: flex;
+	flex-direction: column;
 }
+
+.home-all-apps{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 0rem 3rem 2.4rem;
+}
+
+.home-full-view .home-icon img{
+	width: 2rem;
+}
+
+.home-full-view .home-name{
+	color: var(--alt-txt);
+	font-size: 12px;
+}
+
+.home-app{
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.home-app:hover{
+	background: var(--home-hov-bg);
+}
+
+.recommonded-home-heading{
+	font-weight: 500;
+    font-size: 14px;
+    color: var(--alt-txt);
+	padding: 0 0 1rem 2rem;
+}
+
+.recommonded-home{
+	padding: 1rem 3rem;
+}
+
+.recommended-home-apps{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	/* gap: 1rem; */
+}
+
+.recomm-app{
+	text-decoration: none;
+	height: 3.5rem;
+	width: 48%;
+	border-radius: 4px;
+	padding: 5px 12px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.recomm-app .recomm-icon img{
+	width: 2rem;
+}
+
+.recomm-app .recomm-name{
+	color: var(--alt-txt);
+	font-size: 12px;
+}
+
+.recomm-app:hover{
+	background: var(--home-hov-bg);
+}
+
+.home-full-view-footer{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4px 3rem;
+}
+
+.windows-user-profile{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.windows-user-profile:hover{
+	background: var(--home-hov-bg);
+}
+
+.windows-profile-img img{
+	width: 16px;
+}
+
+.windows-profile-name{
+	color: var(--alt-txt);
+}
+
+.windows-pwr-btn{
+	color: var(--alt-txt);
+	padding: 8px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.windows-pwr-btn:hover{
+	background: var(--home-hov-bg);
+}
+
 
 .search-full-view {
 	width: 40rem;
 	height: 42rem;
-	background-color: var(--comp-txt);
+	background-color: var(--home-menu-bg1);
 	position: absolute;
 	border-radius: 10px;
 	left: 50%;
@@ -813,7 +958,79 @@ input[type="range"]::-ms-thumb {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 	transition: 0.2s;
 	/* visibility: hidden; */
+	padding: 2rem;
+	backdrop-filter: blur(10px);
 }
+
+.search-bar{
+	width: 100%;
+	position: relative;
+}
+
+.search-icon img{
+	position: absolute;
+	width: 1rem;
+	top: 8px;
+	left: 8px;
+	/* z-index: 1; */
+}
+
+.search-bar input{
+	width: 100%;
+	position: absolute;
+	height: 2rem;
+	padding: 4px 4px 4px 2rem;
+	background: var(--home-menu-bg2);
+	border: none;
+	border-bottom: 2px solid var(--calender-act);
+	outline: none;
+	border-radius: 4px;
+	color: var(--alt-txt);
+	font-size: 14px;
+	font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .taskbar-left-widget {
 	width: 47rem;
@@ -879,7 +1096,7 @@ input[type="range"]::-ms-thumb {
 	width: 40px;
 }
 
-.desktop-app {
+.desktop-app-main {
 	margin: 4px;
 	height: 84px;
 	width: 74px;
@@ -892,7 +1109,7 @@ input[type="range"]::-ms-thumb {
 	border: 1px solid transparent;
 }
 
-.desktop-app .name {
+.desktop-app-main .name {
 	color: #fff;
 	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	text-align: center;
@@ -1382,3 +1599,16 @@ mark {
   }
 
   
+.app-body{
+	width: 100%;
+	height: 94%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.window-app-heading{
+	font-size: 24px;
+	color: var(--alt-txt);
+}
