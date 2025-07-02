@@ -866,7 +866,7 @@ input[type="range"]::-ms-thumb {
 	font-weight: 500;
     font-size: 14px;
     color: var(--alt-txt);
-	padding: 0 0 1rem 2rem;
+	padding: 0 0 1rem 0;
 }
 
 .recommonded-home{
@@ -1003,12 +1003,114 @@ input[type="range"]::-ms-thumb {
 
 
 
-
+.search-results {
+	margin-top: 10px;
+	padding: 0;
+	list-style: none;
+	/* border: 1px solid #ccc; */
+	max-height: 18rem;
+	height: 100%;
+	overflow-y: auto;
+	position: absolute;
+	top: 5rem;
+	color: var(--alt-txt);
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
   
+  .search-results li {
+	  background: var(--app-window-bg1);
+	  width: 8.4rem;
+	  border-radius: 6px;
+	height: 8.4rem;
+	padding: 10px;
+	cursor: pointer;
+	transition: background 0.2s ease;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+  }
+  
+  .search-results li:hover,
+  .search-results li.active {
+	background-color: var(--home-hov-bg);
+  }
+  
+  .search-result-item {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	padding: 18px;
+	cursor: pointer;
+	transition: background 0.2s ease;
+}
 
+.search-result-item:hover,
+.search-result-item.active {
+	background-color: var(--home-hov-bg);
+}
 
+.search-result-item img.result-icon {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 4px;
+	object-fit: cover;
+}
 
+.search-result-item .result-name {
+	font-size: 1rem;
+	color: var(--txt-col);
+}
 
+.search-top-apps{
+	position: absolute;
+	top: 24rem;
+}
+
+.top-apps-heading{
+	color: var(--alt-txt);
+	font-size: 14px;
+	font-weight: 500px;
+}
+
+.top-apps{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 16px;
+	padding: 10px;
+}
+
+.top-app{
+	width: 6rem;
+	border: 1px solid var(--app-window-bg1);
+	border-radius: 6px;
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	text-decoration: none;
+	background: var(--app-window-bg2);
+	transition: background 0.2s ease;
+}
+
+.top-app:hover{
+	background: var(--home-hov-bg);
+}
+
+.top-icon img{
+	width: 40px;
+}
+
+.top-name{
+	color: var(--alt-txt);
+}
 
 
 

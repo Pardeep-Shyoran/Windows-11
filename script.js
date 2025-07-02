@@ -1483,3 +1483,93 @@ setInterval(updateWidgetClock, 1000);
 
 
 
+
+
+
+
+
+
+
+
+
+const searchInput = document.querySelector(".search-full-view input");
+const searchResults = document.getElementById("search-results");
+
+if (searchInput) {
+	const availableApps = Array.from(document.querySelectorAll(".home-app"))
+		.filter((app) => app.dataset.app && app.dataset.icon)
+		.map((app) => ({
+			name: app.querySelector(".home-name")?.textContent?.trim() || "",
+			app: app.dataset.app,
+			icon: app.dataset.icon,
+		}));
+
+	let activeIndex = -1;
+
+	searchInput.addEventListener("input", () => {
+		const query = searchInput.value.toLowerCase().trim();
+		searchResults.innerHTML = "";
+		activeIndex = -1;
+
+		if (!query) {
+			searchResults.style.display = "none";
+			return;
+		}
+
+		const matches = availableApps.filter((app) =>
+			app.name.toLowerCase().includes(query)
+		);
+
+		if (matches.length === 0) {
+			searchResults.innerHTML = "<li>No apps found</li>";
+			searchResults.style.display = "flex";
+			return;
+		}
+
+		matches.forEach((app, i) => {
+			const li = document.createElement("li");
+			li.classList.add("search-result-item");
+			li.setAttribute("data-index", i);
+
+			li.innerHTML = `
+				<img src="${app.icon}" alt="${app.name}" class="result-icon" />
+				<span class="result-name">${app.name}</span>
+			`;
+
+			li.addEventListener("click", () => {
+				const win = getAppWindow(app.app);
+				if (win) launchAppWindow(app.app, win, app.icon);
+				hideSearch();
+			});
+
+			searchResults.appendChild(li);
+		});
+		
+
+		searchResults.style.display = "flex";
+	});
+
+	searchInput.addEventListener("keydown", (e) => {
+		const items = searchResults.querySelectorAll("li");
+		if (!items.length) return;
+
+		if (e.key === "ArrowDown") {
+			activeIndex = (activeIndex + 1) % items.length;
+		} else if (e.key === "ArrowUp") {
+			activeIndex = (activeIndex - 1 + items.length) % items.length;
+		} else if (e.key === "Enter" && activeIndex >= 0) {
+			items[activeIndex].click();
+		}
+
+		items.forEach((item, i) => {
+			item.classList.toggle("active", i === activeIndex);
+		});
+	});
+
+	function hideSearch() {
+		document.querySelector(".search-full-view").style.bottom = "-100%";
+		searchInput.value = "";
+		searchResults.innerHTML = "";
+		searchResults.style.display = "none";
+	}
+}
