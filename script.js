@@ -954,6 +954,18 @@ function handleNewFile(dir, baseName = "New File.txt") {
 
 // 5. DOM Ready Initialization
 document.addEventListener("DOMContentLoaded", () => {
+
+	gsap.to("body", { opacity: 1, duration: 0.4 });
+	gsap.to("#page-loader", {
+		opacity: 0,
+		duration: 0.5,
+		delay: 0.2,
+		onComplete: () =>
+			(document.getElementById("page-loader").style.display = "none"),
+	});
+
+
+
 	document.getElementById("query").focus();
 
 	const body = document.body;
