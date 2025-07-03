@@ -32,6 +32,7 @@
 	--home-menu-bg1: rgba(242, 242, 242, 0.9);
 	--home-menu-bg2: rgba(0, 0, 0, 0.033);
 	--home-hov-bg: rgba(255, 255, 255, 0.9);
+	--close-btn-bg: #ff4943;
 }
 
 body.dark-mode {
@@ -55,6 +56,7 @@ body.dark-mode {
 	--home-menu-bg1: rgba(36, 36, 36, 0.95);
 	--home-menu-bg2: rgba(0, 0, 0, 0.15);
 	--home-hov-bg: rgba(255, 255, 255, 0.1);
+	--close-btn-bg: #ff4943;
 }
 * {
 	padding: 0;
@@ -76,6 +78,7 @@ body {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	transition: all 0.5s ease-in-out;
 }
 
 /* Default (light mode) */
@@ -695,6 +698,12 @@ iframe {
 	color: var(--comp-txt);
 }
 
+.system-settings-theme-symbol.active {
+	color: var(--comp-txt);
+	background-color: #007bff;
+	transition: all 0.3s ease;
+}
+
 .system-button img {
 	transition: filter 0.3s ease;
 }
@@ -1186,7 +1195,7 @@ input[type="range"]::-ms-thumb {
 	top: 5rem;
 	left: 5rem;
 	width: 40rem;
-	height: 30rem;
+	height: 35rem;
 	background: var(--app-window-bg1);
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 	display: none;
@@ -1673,17 +1682,157 @@ mark {
 	color: var(--alt-txt);
 }
 
-
-.mul-wallpapers{
+/* Base styles (already present in your code, plus a few tweaks) */
+.settings-container {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-direction: row;
+	height: 100vh;
+	overflow-y: auto;
+	color: var(--alt-txt);
+}
+
+.sidebar {
+	width: 250px;
+	background-color: var(--app-window-bg2);
+	border-right: 1px solid rgba(204, 204, 204, 0.333);
+	padding: 20px;
+	flex-shrink: 0;
+}
+
+.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sidebar-item {
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 8px;
+	margin-bottom: 8px;
+	transition: background 0.3s;
+}
+
+.sidebar-item.active {
+	background-color: #e0e7ff;
+	color: var(--calender-act);
+	font-weight: bold;
+}
+
+.sidebar-item:hover {
+	background-color: var(--calender-bg1);
+}
+
+.content-area {
+	flex-grow: 1;
+	padding: 30px 30px 0px 30px;
+	background-color: var(--app-window-bg1);
+	height: 90%;
+	overflow: auto;
+}
+
+.settings-section {
+	display: none;
+}
+
+.settings-section.active {
+	display: block;
+}
+
+/* Wallpaper section responsiveness */
+.personalization {
+	height: auto;
+	padding-bottom: 150px;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.mul-wallpapers {
+	height: auto;
+	max-height: 45vh;
+	overflow-y: auto;
+}
+
+.mul-wallpapers {
+	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 12px;
 }
 
-.wallpaper img{
+.wallpaper img {
 	border-radius: 6px;
-	width: 280px;
+	width: 100%;
+	max-width: 280px;
 	border: 2px solid var(--nav-bg);
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.wallpaper img:hover {
+	transform: scale(1.03);
+}
+
+.settings-option {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	gap: 8px;
+}
+
+.settings-option label {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--alt-txt);
+}
+
+.settings-option select {
+	padding: 10px 14px;
+	font-size: 14px;
+	border: 1px solid rgba(204, 204, 204, 0.333); /* gray-300 */
+	border-radius: 8px;
+	background-color: var(--comp-txt); /* gray-50 */
+	color: var(--alt-txt); /* gray-900 */
+	appearance: none;
+	outline: none;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.wallpaper-section {
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+#wallpaperUrl {
+	padding: 0.5rem;
+	font-size: 14px;
+	border-radius: 6px;
+	border: 1px solid var(--widget-bar-bg);
+}
+
+#wallpaperUrl:focus {
+	border-color: var(--calender-act);
+	outline: none;
+}
+
+#setWallpaperBtn,
+#resetWallpaperBtn {
+	padding: 0.5rem 1rem;
+	font-size: 14px;
+	border-radius: 6px;
+	border: none;
+	background-color: var(--calender-act);
+	color: var(--comp-txt);
+	cursor: pointer;
+}
+
+#resetWallpaperBtn {
+	background-color: var(--txt-col);
+	color: var(--comp-txt);
+}
+
+.close-btn:hover {
+	background: var(--close-btn-bg);
 }

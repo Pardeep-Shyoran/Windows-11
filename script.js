@@ -31,7 +31,7 @@ const volumeValue = document.getElementById("volumeValue");
 const brightnessValue = document.getElementById("brightnessValue");
 const volumeImage = document.getElementById("volumeImage");
 const sysButtons = document.querySelectorAll(".system-button");
-const themeBtn = document.getElementById("theme-toggle");
+// const themeBtn = document.getElementById("theme-toggle");
 const body = document.body;
 const taskbar = document.querySelector(".taskbar-center");
 const explorerPath = document.getElementById("explorer-path");
@@ -410,32 +410,58 @@ sysButtons.forEach((button, index) => {
 	});
 });
 
-themeBtn.addEventListener("click", () => {
-	body.classList.toggle("dark-mode");
-	themeBtn.classList.toggle("active");
-
-	const isDark = body.classList.contains("dark-mode");
-	localStorage.setItem("theme", isDark ? "dark" : "light");
-});
 
 // 🛠️ Utility functions
 const getAppBtn = (app) =>
-	document.querySelector(`.taskbar-center-app[data-app="${app}"]`);
+	document.querySelector(
+		`.taskbar-center > .taskbar-center-app[data-app="${app}"]`
+	);  
 const getAppWindow = (app) => document.getElementById(`window-${app}`);
 const setVisible = (el, visible) =>
 	(el.style.display = visible ? "block" : "none");
 
+
+
 function createTaskbarBtn(app, icon) {
+	console.log(`Creating taskbar button for ${app} with icon ${icon}`);
+
 	const btn = document.createElement("div");
 	btn.className = "taskbar-center-app";
 	btn.dataset.app = app;
 	btn.dataset.icon = icon;
 	btn.innerHTML = `<img src="${icon}" />`;
+
 	btn.addEventListener("click", () =>
 		toggleAppWindow(app, getAppWindow(app))
 	);
+
+	console.log("Appending to taskbar...");
+	document.querySelector(".taskbar-center").appendChild(btn);
+
 	return btn;
 }
+
+
+
+
+// 🖱️ Init desktop icons (use double-click to open)
+document.querySelectorAll(".desktop-app").forEach((icon) => {
+
+	icon.addEventListener("dblclick", () => {
+		const app = icon.dataset.app;
+		const iconSrc = icon.dataset.icon;
+
+		const win = getAppWindow(app); // <- returns null if #window-terminal doesn't exist
+		if (win) launchAppWindow(app, win, iconSrc);
+
+		if (app === "notepad") {
+			createNewTextFileAndOpenNotepad();
+		} else if (win) {
+			launchAppWindow(app, win, iconSrc);
+		}
+	});
+
+});
 
 // 🚀 Launch app window
 function launchAppWindow(app, win, icon) {
@@ -449,6 +475,14 @@ function launchAppWindow(app, win, icon) {
 		openCount++;
 	}
 	win.style.zIndex = ++currentZIndex;
+	
+
+	console.log(`Launching ${app}`);
+	console.log("  icon:", icon);
+	console.log("  button exists:", !!getAppBtn(app));
+	console.log("  win exists:", !!win);
+
+	
 
 	let btn = getAppBtn(app);
 	if (!btn) {
@@ -456,6 +490,7 @@ function launchAppWindow(app, win, icon) {
 		taskbar.appendChild(btn);
 	}
 	btn.classList.add("active");
+
 }
 
 // 🔁 Toggle visibility
@@ -474,22 +509,6 @@ document.querySelectorAll(".taskbar-center-app[data-app]").forEach((btn) => {
 	btn.addEventListener("click", () => toggleAppWindow(app, win));
 });
 
-// 🖱️ Init desktop icons (use double-click to open)
-document.querySelectorAll(".desktop-app").forEach((icon) => {
-	icon.addEventListener("dblclick", () => {
-		const app = icon.dataset.app;
-		const iconSrc = icon.dataset.icon;
-
-		const win = getAppWindow(app);
-		if (win) launchAppWindow(app, win, iconSrc);
-
-		if (app === "notepad") {
-			createNewTextFileAndOpenNotepad();
-		} else if (win) {
-			launchAppWindow(app, win, iconSrc);
-		}
-	});
-});
 
 // ❌ Close buttons
 document.querySelectorAll(".app-window .close-btn").forEach((btn) => {
@@ -937,11 +956,66 @@ function handleNewFile(dir, baseName = "New File.txt") {
 document.addEventListener("DOMContentLoaded", () => {
 	document.getElementById("query").focus();
 
-	const savedTheme = localStorage.getItem("theme");
-	if (savedTheme === "dark") {
-		body.classList.add("dark-mode");
-		themeBtn.classList.add("active");
+	const body = document.body;
+	const themeSelect = document.getElementById("theme-select");
+	const themeToggles = document.querySelectorAll(".theme-toggle");
+
+	// Load saved theme or default to light
+	const savedTheme = localStorage.getItem("theme") || "light";
+	applyTheme(savedTheme);
+
+	// Set dropdown to match saved theme
+	if (themeSelect) {
+		themeSelect.value = savedTheme;
+
+		themeSelect.addEventListener("change", (e) => {
+			const selectedTheme = e.target.value;
+			localStorage.setItem("theme", selectedTheme);
+			applyTheme(selectedTheme);
+		});
 	}
+
+	// Handle Quick Settings theme toggle
+	themeToggles.forEach((button) => {
+		button.addEventListener("click", () => {
+			const currentTheme = body.classList.contains("dark-mode")
+				? "dark"
+				: "light";
+			const newTheme = currentTheme === "dark" ? "light" : "dark";
+			localStorage.setItem("theme", newTheme);
+			applyTheme(newTheme);
+
+			// Update dropdown if changed from Quick Settings
+			if (themeSelect) themeSelect.value = newTheme;
+		});
+	});
+
+	function applyTheme(theme) {
+		const isDark = theme === "dark";
+		body.classList.toggle("dark-mode", isDark);
+
+		// Loop through all theme buttons (Quick + Settings)
+		themeToggles.forEach((button) => {
+			// Toggle active on outer container
+			button.classList.toggle("active", isDark);
+
+			// Icon inside
+			const icon = button.querySelector(".theme-icon");
+			if (icon) {
+				icon.src = isDark ? "assets/moon.png" : "assets/sun.png";
+				icon.classList.toggle("active", isDark);
+			}
+
+			// 🔹 Add .active to .system-settings-theme-symbol wrapper
+			const symbolWrapper = button.querySelector(
+				".system-settings-theme-symbol"
+			);
+			if (symbolWrapper) {
+				symbolWrapper.classList.toggle("active", isDark);
+			}
+		});
+	}
+
 
 	document.querySelectorAll("#quick-access li").forEach((item) => {
 		item.addEventListener("click", () => {
@@ -974,6 +1048,69 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.getElementById("new-file-btn").addEventListener("click", () => {
 		handleNewFile(getPathObject(currentPath));
 		renderExplorer();
+	});
+
+	const sidebarItems = document.querySelectorAll(".sidebar-item");
+	const sections = document.querySelectorAll(".settings-section");
+
+	sidebarItems.forEach((item) => {
+		item.addEventListener("click", () => {
+			sidebarItems.forEach((i) => i.classList.remove("active"));
+			item.classList.add("active");
+
+			sections.forEach((section) => section.classList.remove("active"));
+			const target = item.getAttribute("data-section");
+			document.getElementById(target).classList.add("active");
+		});
+	});
+
+
+	const wallpaperContainer = document.querySelector(".mul-wallpapers");
+	const wallpaperUrlInput = document.getElementById("wallpaperUrl");
+	const setWallpaperBtn = document.getElementById("setWallpaperBtn");
+	const resetWallpaperBtn = document.getElementById("resetWallpaperBtn");
+	const WALLPAPER_KEY = "backgroundImage";
+
+	// ✅ Load wallpaper from localStorage on page load
+	const savedBg = localStorage.getItem(WALLPAPER_KEY);
+	if (savedBg) {
+		document.body.style.backgroundImage = `url("${savedBg}")`;
+		if (wallpaperUrlInput)
+			wallpaperUrlInput.value = savedBg.startsWith("http") ? savedBg : "";
+	}
+
+	// ✅ User clicks a predefined gallery wallpaper
+	if (wallpaperContainer) {
+		wallpaperContainer.addEventListener("click", (e) => {
+			if (e.target.tagName === "IMG") {
+				const imgPath = e.target.getAttribute("src");
+				document.body.style.backgroundImage = `url("${imgPath}")`;
+				localStorage.setItem(WALLPAPER_KEY, imgPath);
+
+				// Clear custom URL field
+				if (wallpaperUrlInput) wallpaperUrlInput.value = "";
+			}
+		});
+	}
+
+	// ✅ Set new wallpaper via URL
+	setWallpaperBtn?.addEventListener("click", () => {
+		const url = wallpaperUrlInput.value.trim();
+
+		if (!url || !url.startsWith("http")) {
+			alert("Please enter a valid image URL.");
+			return;
+		}
+
+		document.body.style.backgroundImage = `url("${url}")`;
+		localStorage.setItem(WALLPAPER_KEY, url);
+	});
+
+	// ✅ Reset to default background
+	resetWallpaperBtn?.addEventListener("click", () => {
+		localStorage.removeItem(WALLPAPER_KEY);
+		document.body.style.backgroundImage = "var(--bg-image)";
+		if (wallpaperUrlInput) wallpaperUrlInput.value = "";
 	});
 
 	renderExplorer();
@@ -1560,3 +1697,11 @@ setInterval(updateWidgetClock, 1000);
 
 // renderExplorer();
 // renderDesktopFiles();
+
+
+
+
+
+
+
+

@@ -18,7 +18,6 @@
 					<div class="taskbar-center-app taskbar-home-app">
 						<img src="assets/home.png" alt="" />
 					</div>
-					<!-- <img src="assets/search.svg" alt=""> -->
 					<div class="taskbar-center-app taskbar-search-app">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -74,9 +73,6 @@
 					>
 						<img src="assets/store.png" alt="" />
 					</div>
-					<!-- <div class="taskbar-center-app">
-						<img src="assets/store.png" alt="" />
-					</div> -->
 				</div>
 				<div class="taskbar-right no-context-menu">
 					<div class="taskbar-right-running">
@@ -433,7 +429,7 @@
 							Display settings
 						</div>
 					</li>
-					<li onclick="alert('Personalize')">
+					<li onclick="alert('Personalize')" >
 						<div class="context-menu-img context-menu-one">
 							<svg
 								viewBox="0 0 500 500"
@@ -676,6 +672,7 @@
 							</div>
 							<div class="system-settings-wifi-heading">WiFi</div>
 						</div>
+
 						<div class="system-settings-bluetooth">
 							<div
 								class="system-settings-bluetooth-symbol system-button"
@@ -690,6 +687,7 @@
 								Bluetooth
 							</div>
 						</div>
+
 						<div class="system-settings-flightmode">
 							<div
 								class="system-settings-flightmode-symbol system-button"
@@ -704,6 +702,7 @@
 								Flight Mode
 							</div>
 						</div>
+
 						<div class="system-settings-batterysaver">
 							<div
 								class="system-settings-batterysaver-symbol system-button"
@@ -718,12 +717,13 @@
 								Battery Saver
 							</div>
 						</div>
-						<div class="system-settings-theme" id="theme-toggle">
+
+						<div class="system-settings-theme theme-toggle">
 							<div
-								class="system-settings-theme-symbol system-button"
+								class="system-settings-theme-symbol "
 							>
 								<img
-									class="theme-sensitive"
+									class="theme-sensitive theme-icon"
 									src="assets/sun.png"
 									alt=""
 								/>
@@ -732,6 +732,7 @@
 								Theme
 							</div>
 						</div>
+
 						<div class="system-settings-nightlight">
 							<div
 								class="system-settings-nightlight-symbol system-button"
@@ -746,6 +747,7 @@
 								Night Light
 							</div>
 						</div>
+
 					</div>
 					<div class="system-settings-bright">
 						<div class="system-settings-bright-icon">
@@ -1098,7 +1100,7 @@
 						<div
 							data-app="mail"
 							data-icon="assets/mail.png"
-							class="recomm-app-mail taskbar-center-app recomm-app"
+							class="recomm-app-mail desktop-app recomm-app"
 						>
 							<div class="recomm-app-mail-icon recomm-icon">
 								<img src="assets/mail.png" alt="" />
@@ -1125,7 +1127,7 @@
 						<div
 							data-app="terminal"
 							data-icon="assets/terminal.png"
-							class="recomm-app-terminal taskbar-center-app recomm-app"
+							class="recomm-app-terminal desktop-app recomm-app"
 						>
 							<div class="recomm-app-terminal-icon recomm-icon">
 								<img src="assets/terminal.png" alt="" />
@@ -1150,7 +1152,7 @@
 						<div
 							data-app="github"
 							data-icon="assets/github.png"
-							class="recomm-app-github taskbar-center-app recomm-app"
+							class="recomm-app-github desktop-app recomm-app"
 						>
 							<div class="recomm-app-github-icon recomm-icon">
 								<img src="assets/github.png" alt="" />
@@ -1413,6 +1415,7 @@
 			</div>
 
 			<div class="all-apps">
+				
 				<div
 					id="window-terminal"
 					class="app-window hidden"
@@ -1891,96 +1894,6 @@
 					</div>
 				</div>
 
-				<div
-					id="window-notepad"
-					class="app-window hidden"
-					data-app="notepad"
-				>
-					<div class="app-window-header">
-						<div class="app-window-main">
-							<div class="app-window-icon">
-								<img src="assets/notepad.png" alt="" />
-							</div>
-							<div class="app-window-name">Notepad</div>
-						</div>
-						<div class="app-window-btn">
-							<button class="minimise-btn window-btns">
-								<img
-									class="theme-sensitive window-btn"
-									src="assets/minimize.png"
-									alt=""
-								/>
-							</button>
-							<button class="maximise-btn window-btns">
-								<img
-									class="theme-sensitive window-btn"
-									src="assets/maxmin.png"
-									alt=""
-								/>
-							</button>
-							<button class="close-btn window-btns">
-								<img
-									class="theme-sensitive window-btn"
-									src="assets/close.png"
-									alt=""
-								/>
-							</button>
-						</div>
-					</div>
-					<div class="notepad-body">
-						<div class="notepad-toolbar">
-							<button id="newFile">New</button>
-							<button id="renameFile">Rename</button>
-							<button id="deleteFile">Delete</button>
-							<button id="saveNote">Save</button>
-							<button id="clearNote">Clear</button>
-						</div>
-						<div class="notepad-format-toolbar">
-							<button data-cmd="bold"><b>B</b></button>
-							<button data-cmd="italic"><i>I</i></button>
-							<button data-cmd="underline"><u>U</u></button>
-							<button data-cmd="formatBlock" data-value="h1">
-								H1
-							</button>
-							<button data-cmd="formatBlock" data-value="p">
-								P
-							</button>
-
-							<!-- Font Size Dropdown -->
-							<select id="fontSizeSelector">
-								<option value="1">Size 1</option>
-								<option value="2">Size 2</option>
-								<option value="3" selected>
-									Size 3 (default)
-								</option>
-								<option value="4">Size 4</option>
-								<option value="5">Size 5</option>
-								<option value="6">Size 6</option>
-								<option value="7">Size 7</option>
-							</select>
-
-							<!-- Text Color Picker -->
-							<input
-								type="color"
-								id="textColorPicker"
-								title="Text Color"
-							/>
-						</div>
-
-						<div
-							id="notepadContent"
-							class="editable"
-							contenteditable="true"
-							placeholder="Start typing..."
-						></div>
-					</div>
-
-					<!-- <div id="window-about-app" class="app-window hidden">
-				<button onclick="this.parentElement.style.display='none'">X</button>
-				<h2>About</h2>
-				<p>This is created by Pardeep Shyoran.</p>
-			</div> -->
-				</div>
 
 				<div
 					id="window-settings"
@@ -2018,33 +1931,118 @@
 							</button>
 						</div>
 					</div>
-					<!-- <div class="app-body">
-						<div class="window-app-heading">Settings</div>
-						<div class="coming-soon-img">
-							<img src="assets/coming-soon.png" alt="" />
-						</div>
-					</div> -->
 					<div class="settings-body">
-						<div class="mul-wallpapers">
-							<div class="wallpaper wallpaper-1">
-								<img src="assets/Img0.jpg" alt="">
-							</div>
-							<div class="wallpaper wallpaper-2">
-								<img src="assets/img1.jpg" alt="">
-							</div>
-							<div class="wallpaper wallpaper-3">
-								<img src="assets/img2.jpg" alt="">
-							</div>
-							<div class="wallpaper wallpaper-4">
-								<img src="assets/img3.jpg" alt="">
-							</div>
-							<div class="wallpaper wallpaper-5">
-								<img src="assets/img4.jpg" alt="">
-							</div>
-							<div class="wallpaper wallpaper-6">
-								<img src="assets/img5.jpg" alt="">
-							</div>
-						</div>
+						
+						<div class="settings-container">
+							<!-- Sidebar -->
+							<aside class="sidebar">
+							  <ul>
+								<li class="sidebar-item active" data-section="system">System</li>
+								<li class="sidebar-item" data-section="personalization">Personalization</li>
+								<li class="sidebar-item" data-section="network">Network</li>
+								<li class="sidebar-item" data-section="about">About</li>
+							  </ul>
+							</aside>
+						  
+							<!-- Main Content -->
+							<main class="content-area">
+
+							  <div class="settings-section active" id="system">
+								<h2>System Settings</h2>
+								<p>Display, sound, notifications, power options.</p>
+							  </div>
+
+							  <div class="settings-section personalization" id="personalization">
+								<h2>Personalization</h2>
+								<h3>Wallpapers</h3>
+								<div class="mul-wallpapers">
+									<div class="wallpaper wallpaper-1">
+										<img src="assets/Img0.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-2">
+										<img src="assets/img1.jpg" alt="">
+									</div>
+									<div class="wallpaper wallpaper-3">
+										<img src="assets/img2.jpg" alt="">
+									</div>
+									<div class="wallpaper wallpaper-4">
+										<img src="assets/img3.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-5">
+										<img src="assets/img4.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-6">
+										<img src="assets/img5.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-7">
+										<img src="assets/img6.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-8">
+										<img src="assets/img7.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-9">
+										<img src="assets/img8.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-10">
+										<img src="assets/img9.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-11">
+										<img src="assets/img10.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-12">
+										<img src="assets/img11.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-13">
+										<img src="assets/img12.webp" alt="">
+									</div>
+									<div class="wallpaper wallpaper-14">
+										<img src="assets/img13.webp" alt="">
+									</div>
+									<div class="wallpaper wallpaper-15">
+										<img src="assets/img14.jpg" alt="">
+									</div>
+									<div class="wallpaper wallpaper-16">
+										<img src="assets/img15.jpg" alt="">
+									</div>
+								</div>
+
+								<div class="wallpaper-section">
+									<label for="wallpaperUrl">Enter wallpaper URL:</label>
+									<input type="text" id="wallpaperUrl" placeholder="https://example.com/image.jpg" />
+									<div class="wallpaper-buttons">
+									  <button id="setWallpaperBtn">Set Wallpaper</button>
+									  <button id="resetWallpaperBtn">Reset</button>
+									</div>
+								  </div>
+								  
+																	
+
+								<!-- New theme dropdown -->
+								<div class="settings-option">
+									<label for="theme-select">Theme:</label>
+									<select id="theme-select">
+									  <option value="light">Light</option>
+									  <option value="dark">Dark</option>
+									</select>
+								  </div>
+  
+							  </div>
+
+							  <div class="settings-section" id="network">
+								<h2>Network</h2>
+								<p>Wi-Fi, Ethernet, VPN connections.</p>
+							  </div>
+
+							  <div class="settings-section" id="about">
+								<h2>About</h2>
+								<p>System info, OS version, hardware specs.</p>
+							  </div>
+
+							</main>
+						  </div>
+						  
+						  
+
 					</div>
 				</div>
 
@@ -2092,7 +2090,11 @@
 					</div>
 				</div>
 
-				<div id="window-mail" class="app-window hidden" data-app="mail">
+				<div
+					id="window-mail"
+					class="app-window hidden"
+					data-app="mail"
+				>
 					<div class="app-window-header">
 						<div class="app-window-main">
 							<div class="app-window-icon">
@@ -2131,6 +2133,7 @@
 						</div>
 					</div>
 				</div>
+		
 
 				<div
 					id="window-taskmanager"
@@ -2306,6 +2309,93 @@
 							<img src="assets/coming-soon.png" alt="" />
 						</div>
 					</div>
+				</div>
+
+				
+				<div
+					id="window-notepad"
+					class="app-window hidden"
+					data-app="notepad"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/notepad.png" alt="" />
+							</div>
+							<div class="app-window-name">Notepad</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="notepad-body">
+						<div class="notepad-toolbar">
+							<button id="newFile">New</button>
+							<button id="renameFile">Rename</button>
+							<button id="deleteFile">Delete</button>
+							<button id="saveNote">Save</button>
+							<button id="clearNote">Clear</button>
+						</div>
+						<div class="notepad-format-toolbar">
+							<button data-cmd="bold"><b>B</b></button>
+							<button data-cmd="italic"><i>I</i></button>
+							<button data-cmd="underline"><u>U</u></button>
+							<button data-cmd="formatBlock" data-value="h1">
+								H1
+							</button>
+							<button data-cmd="formatBlock" data-value="p">
+								P
+							</button>
+
+							<!-- Font Size Dropdown -->
+							<select id="fontSizeSelector">
+								<option value="1">Size 1</option>
+								<option value="2">Size 2</option>
+								<option value="3" selected>
+									Size 3 (default)
+								</option>
+								<option value="4">Size 4</option>
+								<option value="5">Size 5</option>
+								<option value="6">Size 6</option>
+								<option value="7">Size 7</option>
+							</select>
+
+							<!-- Text Color Picker -->
+							<input
+								type="color"
+								id="textColorPicker"
+								title="Text Color"
+							/>
+						</div>
+
+						<div
+							id="notepadContent"
+							class="editable"
+							contenteditable="true"
+							placeholder="Start typing..."
+						></div>
+					</div>
+
 				</div>
 			</div>
 		</div>
