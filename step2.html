@@ -1,24 +1,28 @@
-<!-- index.html -->
+<!-- step2.html -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lock Screen</title>
-    <link rel="stylesheet" href="style/step1.css">
+		<title>Step 2</title>
+		<link rel="stylesheet" href="style/step2.css">
 	</head>
 	<body>
+
     <div class="date-time">
-      <div class="clock"></div>
-      <div class="date"></div>
+      <div class="time"></div>
+      <div class="day-date"></div>
     </div>
-    
-		<div class="lock-screen" onclick="unlock()">
-			<h2>🔒 Click to Unlock</h2>
+		<div class="main-user">
+			<div class="user-profile">
+				<img src="assets/sheryians.webp" alt="">
+			</div>
+			<h2>Pardeep Shyoran</h2>
+			<button onclick="goToMain()">Sign in</button>
 		</div>
 
 		<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script> -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-		<script src="js/step1.js"></script>
+		<script src="js/step2.js"></script>
 	</body>
 </html>

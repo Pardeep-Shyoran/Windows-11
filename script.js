@@ -1705,3 +1705,9 @@ setInterval(updateWidgetClock, 1000);
 
 
 
+gsap.to(".content", {
+	opacity: 1,
+	y: -20,
+	duration: 1,
+	ease: "power2.out",
+});

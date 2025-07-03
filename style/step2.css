@@ -1,0 +1,45 @@
+body {
+	display: flex;
+	height: 100vh;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../assets/lock.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+	backdrop-filter: blur(20px);
+	transition: all 0.5s ease-in-out;
+	color: white;
+	font-family: sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-user .user-profile img{
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+button {
+    background: rgba(255, 255, 255, .2);
+    font-size: 13px;
+    padding: 4px 36px 6px;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover{
+    border: 2px solid rgba(255, 255, 255, .33);
+}

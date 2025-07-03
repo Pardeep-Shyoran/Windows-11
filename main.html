@@ -1,0 +1,2423 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Windows 11</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="assets/home.png" />
+	</head>
+
+	<body>
+		<div id="desktop" class="desktop">
+			<div id="taskbar" class="taskbar">
+				<div class="taskbar-left no-context-menu">
+					<img src="assets/widget.png" alt="" />
+				</div>
+				<div class="taskbar-center no-context-menu">
+					<div class="taskbar-center-app taskbar-home-app">
+						<img src="assets/home.png" alt="" />
+					</div>
+					<div class="taskbar-center-app taskbar-search-app">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							height="32"
+							width="32"
+						>
+							<circle
+								cx="13"
+								cy="11"
+								r="8"
+								fill="#ffffff24"
+							></circle>
+							<g
+								fill="none"
+								stroke="currentColor"
+								stroke-linejoin="round"
+								stroke-width="2"
+							>
+								<circle cx="13" cy="11" r="8"></circle>
+								<path
+									d="M3 21l4-4"
+									stroke-linecap="round"
+								></path>
+							</g>
+						</svg>
+					</div>
+					<div
+						data-app="settings"
+						data-icon="assets/settings.png"
+						class="taskbar-center-app taskbar-settings-app"
+					>
+						<img src="assets/settings.png" alt="" />
+					</div>
+					<div
+						data-app="explorer"
+						data-icon="assets/explorer.png"
+						class="taskbar-center-app taskbar-explorer-app"
+					>
+						<img src="assets/explorer.png" alt="" />
+					</div>
+					<div
+						data-app="edge"
+						data-icon="assets/edge.png"
+						class="taskbar-center-app taskbar-edge-app"
+					>
+						<img src="assets/edge.png" alt="" />
+					</div>
+					<div
+						data-app="store"
+						data-icon="assets/store.png"
+						class="taskbar-center-app taskbar-store-app"
+					>
+						<img src="assets/store.png" alt="" />
+					</div>
+				</div>
+				<div class="taskbar-right no-context-menu">
+					<div class="taskbar-right-running">
+						<!-- <img src="assets/uparrow.svg" alt=""> -->
+						<svg
+							aria-hidden="true"
+							focusable="false"
+							data-prefix="fas"
+							data-icon="chevron-up"
+							class="svg-inline--fa fa-chevron-up"
+							role="img"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+							data-flip="false"
+							data-invert="false"
+							data-rounded="false"
+							style="width: 10px; height: 10px"
+						>
+							<path
+								fill="currentColor"
+								d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+							></path>
+						</svg>
+					</div>
+					<div class="taskbar-right-system-tray">
+						<div class="taskbar-right-system-tray-wifi">
+							<img
+								class="theme-sensitive"
+								src="assets/wifi.png"
+								alt=""
+							/>
+						</div>
+						<div class="taskbar-right-system-tray-audio">
+							<img
+								class="theme-sensitive"
+								src="assets/audio3.png"
+								alt=""
+							/>
+						</div>
+						<span class="taskbar-right-system-tray-battery">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="20"
+								width="20"
+								fill="none"
+								viewBox="0 0 24 24"
+								class="theme-sensitive"
+							>
+								<path
+									xmlns="http://www.w3.org/2000/svg"
+									fill="#000"
+									d="M17 6a3 3 0 0 1 3 3v1h1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h12Zm-.002 1.5H5a1.5 1.5 0 0 0-1.493 1.356L3.5 9v6a1.5 1.5 0 0 0 1.355 1.493L5 16.5h11.998a1.5 1.5 0 0 0 1.493-1.355l.007-.145V9a1.5 1.5 0 0 0-1.355-1.493l-.145-.007Z"
+								></path>
+							</svg>
+							<!-- <img src="assets/battery.svg" alt=""> -->
+							<div
+								class="taskbar-right-system-tray-battery-fullcharge"
+							>
+								<!-- <img src="assets/fullbattery.svg" alt=""> -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="20"
+									width="20"
+									fill="none"
+									viewBox="0 0 24 24"
+									class="theme-sensitive"
+								>
+									<path
+										fill="#000"
+										d="M17 6a3 3 0 0 1 3 3v1h1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h12Zm-.002 1.5H5a1.5 1.5 0 0 0-1.494 1.356L3.5 9v6a1.5 1.5 0 0 0 1.355 1.493L5 16.5h11.998a1.5 1.5 0 0 0 1.493-1.355l.007-.145V9a1.5 1.5 0 0 0-1.355-1.493l-.145-.007ZM6 9h10a1 1 0 0 1 .993.883L17 10v4a1 1 0 0 1-.883.993L16 15H6a1 1 0 0 1-.993-.883L5 14v-4a1 1 0 0 1 .883-.993L6 9h10H6Z"
+									></path>
+								</svg>
+							</div>
+							<div
+								class="taskbar-right-system-tray-battery-charger"
+							>
+								<!-- <img src="assets/charging.svg" alt=""> -->
+								<svg
+									id="charging-icon"
+									xmlns="http://www.w3.org/2000/svg"
+									width="12"
+									height="12"
+									fill="none"
+									viewBox="0 0 24 24"
+									class="theme-sensitive"
+								>
+									<path
+										fill="#000"
+										stroke="#f3f3f3"
+										stroke-width="2"
+										d="m8.294 14-1.767 7.068c-.187.746.736 1.256 1.269.701L19.79 9.27A.75.75 0 0 0 19.25 8h-4.46l1.672-5.013A.75.75 0 0 0 15.75 2h-7a.75.75 0 0 0-.721.544l-3 10.5A.75.75 0 0 0 5.75 14h2.544Z"
+									></path>
+								</svg>
+							</div>
+						</span>
+					</div>
+					<div class="taskbar-right-calander">
+						<div class="clock"></div>
+						<div class="date"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="custom-menu" class="context-menu">
+				<ul>
+					<li onclick="alert('View')">
+						<div class="context-menu-img context-menu-one">
+							<svg
+								fill="none"
+								stroke-width="1.5"
+								viewBox="0 0 24 24"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="width: 16px; height: 16px"
+							>
+								<path
+									stroke="currentColor"
+									d="M14 20.4v-5.8c0-.3.3-.6.6-.6h5.8c.3 0 .6.3.6.6v5.8c0 .3-.3.6-.6.6h-5.8a.6.6 0 01-.6-.6zM3 20.4v-5.8c0-.3.3-.6.6-.6h5.8c.3 0 .6.3.6.6v5.8c0 .3-.3.6-.6.6H3.6a.6.6 0 01-.6-.6zM14 9.4V3.6c0-.3.3-.6.6-.6h5.8c.3 0 .6.3.6.6v5.8c0 .3-.3.6-.6.6h-5.8a.6.6 0 01-.6-.6zM3 9.4V3.6c0-.3.3-.6.6-.6h5.8c.3 0 .6.3.6.6v5.8c0 .3-.3.6-.6.6H3.6a.6.6 0 01-.6-.6z"
+								></path>
+							</svg>
+						</div>
+						<div class="context-menu-text context-menu-one">
+							View
+						</div>
+						<div class="context-menu-arrow">
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								data-prefix="fas"
+								data-icon="chevron-right"
+								class="svg-inline--fa fa-chevron-right"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="
+									width: 10px;
+									height: 10px;
+									color: rgb(153, 153, 153);
+								"
+							>
+								<path
+									fill="currentColor"
+									d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+								></path>
+							</svg>
+						</div>
+
+						<ul class="view-menu sub-menu">
+							<li>
+								<div class="view-menu-text">Large icons</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Medium icons</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Small icons</div>
+								<div>.</div>
+							</li>
+							<div class="view-menu-hr"></div>
+							<li>
+								<div class="view-menu-text">
+									Show Desktop icons
+								</div>
+								<div>.</div>
+							</li>
+						</ul>
+					</li>
+					<li onclick="alert('Sort by')">
+						<div class="context-menu-img context-menu-one">
+							<svg
+								viewBox="0 0 416 330"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="width: 16px; height: 16px"
+							>
+								<path
+									stroke="currentColor"
+									fill="currentColor"
+									d="M124 1h8l6 2 4 3 106 107 4 8v9l-2 5-5 6-8 4h-9l-8-4-71-71-1 144-1 1v81q-2 8-8 12l-6 3h-11q-8-3-12-8l-2-3-1-3v-5l-1-1V133l1-1V70l-69 69-3 4-8 4H17l-10-5v-1l-5-7-1-8q2-1 1-5l3-5L116 5l8-4z"
+								></path>
+								<path
+									fill="var(--clrPrm)"
+									stroke="var(--clrPrm)"
+									d="M284 17h12q7 3 11 9l3 6 1 226 70-71 9-5h12l5 2 7 8 2 4v14l-3 6-110 110-5 3q-4-1-4 1h-9l-7-3-4-3-108-107-4-8v-11l3-7 6-6 6-3h13l6 3 72 72V33l2-5 6-7 8-4z"
+								></path>
+							</svg>
+						</div>
+						<div class="context-menu-text context-menu-one">
+							Sort by
+						</div>
+						<div class="context-menu-arrow">
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								data-prefix="fas"
+								data-icon="chevron-right"
+								class="svg-inline--fa fa-chevron-right"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="
+									width: 10px;
+									height: 10px;
+									color: rgb(153, 153, 153);
+								"
+							>
+								<path
+									fill="currentColor"
+									d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+								></path>
+							</svg>
+						</div>
+
+						<ul class="sort-menu sub-menu">
+							<li>
+								<div class="view-menu-text">Name</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Size</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Date Modified</div>
+								<div>.</div>
+							</li>
+						</ul>
+					</li>
+					<li onclick="alert('Refresh')">
+						<div class="context-menu-img context-menu-one">
+							<svg
+								viewBox="0 0 64 64"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="width: 16px; height: 16px"
+							>
+								<path
+									stroke="currentColor"
+									fill="currentColor"
+									d="M52.36 2.42c1.13-.78 3.1.11 3.01 1.58.16 4.63.24 9.29-.06 13.92-1.33 1.78-3.92 1.84-5.83 2.7-2.86.88-5.63 2.05-8.55 2.73-2.24.82-3.57-2.75-1.56-3.76 3.12-1.45 6.55-2.08 9.7-3.46-4.53-5.47-12.03-8.07-19.02-7.52-7.45.53-14.44 4.97-18.24 11.38-3.59 5.9-4.28 13.42-1.95 19.9 2.06 5.83 6.52 10.78 12.13 13.38 6.52 3.08 14.48 2.94 20.86-.43 6.41-3.32 11.14-9.75 12.27-16.9.69-3.14-.13-6.37.28-9.52 1.08-1 2.2-1.08 3.38-.25.99 1.78.87 3.87.92 5.83.09 8.42-4.09 16.75-10.83 21.79-5.85 4.49-13.59 6.43-20.87 5.25-9.43-1.37-17.82-8.13-21.22-17.02-3.85-9.35-1.81-20.75 4.95-28.25C18.12 6.4 28.59 2.98 38.11 5.12c4.88.92 9.11 3.7 13.03 6.61.17-2.8-.15-5.63.26-8.41l.96-.9z"
+								></path>
+							</svg>
+						</div>
+						<div class="context-menu-text context-menu-one">
+							Refresh
+						</div>
+					</li>
+					<div class="menu-hr"></div>
+					<li>
+						<div class="context-menu-img context-menu-one">
+							<svg
+								viewBox="0 0 500 500"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="width: 16px; height: 16px"
+							>
+								<path
+									fill="var(--clrPrm)"
+									stroke="var(--clrPrm)"
+									d="M245 151h11q4 2 7 6l3 6v71h72q6 2 9 7l2 4v11l-5 7-6 3h-72v72q-2 6-6 9l-4 2h-11l-8-5-3-6v-72h-71q-7-2-10-6l-2-4v-11q2-5 6-8l6-3h71v-71q2-7 7-10l4-2z"
+								></path>
+								<path
+									stroke="currentColor"
+									fill="currentColor"
+									d="M249 26q3-1 4 1h19l1 1h7l1 1h6l6 2h5l1 1 11 2 4 2h3l6 3 13 4 21 10 21 13 17 13 17 17 17 20 11 16 5 10 2 2 12 26 6 18v3l2 4 1 8 1 1v4l1 1v4l1 1 1 14 1 1v19q2 0 1 4l-1 1v18l-1 1v8l-1 1v6l-1 1-2 14-1 1v3l-2 4v3l-6 18-5 10v2l-7 14-13 21-13 17-16 17-20 17-16 11-10 5-2 2-26 12-21 7h-3l-5 2h-4l-1 1h-4l-1 1h-4l-1 1-14 1-1 1h-19q-1 2-4 1l-1-1h-19l-1-1h-7l-1-1h-6l-1-1-14-2-1-1-10-2-18-6-3-2h-2l-21-10-21-13-17-13-17-15-18-21-11-16-5-10-2-2-10-21-5-16-2-3-1-7-3-8-2-14-1-1-1-14-1-1v-19q-2-1-1-4l1-1v-19l1-1v-7l1-1v-6l1-1 2-14 4-12v-3l2-3 3-11 5-10v-2l7-14 13-21 13-17 16-17 21-18 16-11 10-5 2-2 21-10 16-5 3-2 7-1 8-3h4l1-1h4l6-2h6l1-1h7l1-1h19l1-1zm-13 31l-1 1h-9l-1 1h-6l-1 1h-4l-1 1h-4l-9 3h-3l-15 5-3 2h-2l-7 4h-2q-31 15-53 37-25 24-41 58v2l-5 10-5 15-2 11-1 1v4l-1 1v4l-1 1v6l-1 1v9l-1 1v29l1 1v9l1 1v6l1 1v4l1 1v4l3 9v3l5 15 5 10v2l10 19q12 19 28 36 23 24 56 39h2l7 4h2l3 2 15 5 11 2 1 1h4l1 1 12 1 1 1h8l1 1h29l1-1 15-1 1-1h5l1-1h4l9-3h3l15-5 24-11 10-6q17-11 32-25l13-14 10-13 12-19 5-10v-2l4-7v-2l2-3 5-15 2-11 1-1v-4l1-1 1-12 1-1v-9l1-1v-28l-1-1-1-15-1-1v-5l-1-1v-4l-3-9v-3l-5-15-11-24-6-10q-11-19-26-33-17-18-38-31l-19-10h-2l-10-5-15-5-11-2-1-1h-4l-1-1h-4l-1-1h-6l-1-1h-9l-1-1h-29z"
+								></path>
+							</svg>
+						</div>
+						<div class="context-menu-text context-menu-one">
+							New
+						</div>
+						<div class="context-menu-arrow">
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								data-prefix="fas"
+								data-icon="chevron-right"
+								class="svg-inline--fa fa-chevron-right"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="
+									width: 10px;
+									height: 10px;
+									color: rgb(153, 153, 153);
+								"
+							>
+								<path
+									fill="currentColor"
+									d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+								></path>
+							</svg>
+						</div>
+
+						<ul class="new-menu sub-menu">
+							<li id="desktop-new-folder">
+								<div class="view-menu-text">Folder</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Shortcut</div>
+								<div>.</div>
+							</li>
+							<li id="desktop-new-file">
+								<div class="view-menu-text">Text Document</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">
+									Compressed Folder
+								</div>
+								<div>.</div>
+							</li>
+						</ul>
+					</li>
+					<div class="menu-hr"></div>
+					<li onclick="alert('Dispaly Settings')">
+						<div class="context-menu-img context-menu-one">
+							<svg
+								viewBox="0 0 500 500"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="width: 16px; height: 16px"
+							>
+								<path
+									stroke="currentColor"
+									fill="currentColor"
+									d="M243.5 37h210l18 6L485 53.5l6 8 5 10 3 9v10l1 1v255l-1 1v10l-3 9-5 10-8.5 10.5-8 6-10 5-6 1-1 1h-4l-1 1H345v62h46.5q6.8 2.3 10.5 7.5l3 8v5l-3 7-4.5 4.5-6 3h-258l-5-2-5.5-5.5-3-7v-7l5.5-9.5 8-4H180v-62H71.5l-1-1-8-1-9-4-9-6-5.5-5.5-10-16-3-9v-6l-1-1v-92l.5-.5 4 4 12 8 18.5 9.5v70l3 7 5.5 5.5 5 2h378q6.8-2.3 10.5-7.5l3-8v-261l-3-8-5.5-5.5-5-2h-188l-1.5-1.5-6-14-12-18-.5-2.5zM214 401v62h96v-62h-96z"
+								></path>
+								<path
+									fill="var(--clrPrm)"
+									stroke="var(--clrPrm)"
+									d="M105.5 0h28l1 1h6.5q-.8 2.6 1 3.5v4l1 1v3l1 1v3l1 1v3l2 6 7 12 6.5 6.5 7 5 12 5q4-1 5 1h12l1-1h4l4-2h3l7-3h3L230 66.5l6 12 3 10-15 15-7 12-1 6-1 1v4l-1 1v13l1 1v4l3 9 4 7 17 18-8 20-12.5 18.5-9-3h-3l-4-2h-3l-1-1h-16l-14 5-12.5 9.5-5 7-5 10v3l-3 9-1 7-1 1v3.5h-8.5l-1 1h-24l-1-1H99l-1-2.5v-3l-1-1v-3l-1-1-1-8-3-9-6-10-8.5-8.5-13-7h-3l-5-2h-16l-4 2h-3l-12 4L11 203.5l-7-14-1-5-2-3v-3l12-11 7-10 3-7 1-6 1-1v-4l1-1v-9l-1-1-1-9-5-11q-7.4-11.6-18-20v-2l10-22 9-13V50l7.5 1 7 3 8 1 1 1h11q1.3-2.3 6-1l10-5h2L85 39.5l7-11 3-9v-3l1-1v-4l2-5v-4L99.5 1q4.8 1.3 6-1zm8.5 98l-6 2-9 5-9 10-5 12v14q2 0 1 4l4 9 3 4 5 4 8 5 6 2h5l1 1 14-2 8-4 4-4h1v-1q5-5 8-12l1-7 1-1v-9q-2-1-1-5l-2-6-6-9q-5-7-13-10l-6-2h-13z"
+								></path>
+							</svg>
+						</div>
+						<div class="context-menu-text context-menu-one">
+							Display settings
+						</div>
+					</li>
+					<li onclick="alert('Personalize')" >
+						<div class="context-menu-img context-menu-one">
+							<svg
+								viewBox="0 0 500 500"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="width: 16px; height: 16px"
+							>
+								<path
+									stroke="currentColor"
+									fill="currentColor"
+									d="M449.95 39.46c3.99-.83 8.16-1.78 12.22-.8 5.49 1.38 11.18 3.89 14.17 8.98 4.85 7.83 3.75 17.6 1.21 26.02-6.16 20.19-17.58 38.2-29.21 55.62-24.35 35.07-51.89 67.84-80.51 99.44-3.08 4.23-7.21 7.53-10.43 11.64-3.64 4.69-8.34 8.4-12.08 12.99-4.88 6.06-10.81 11.15-16 16.92-2.33 3-4.95 5.75-7.66 8.4l-44.02 44.03c-8.61 8.78-18.19 16.49-27.16 24.88-12.11 9.74-24.12 20.08-38.52 26.3-2.15 1.28-4.63.58-6.94.4.05-3.33.3-6.75-.71-9.98l-.53-2.66-1.03-3.1c-1.1-2.26-2.19-4.53-3.46-6.7 1.1-1.95 2.21-4.04 4.25-5.17 13.79-8.14 25.98-18.66 37.86-29.32 6.1-6.6 13.33-11.98 19.52-18.48 8.16-7.52 15.84-15.52 23.63-23.43 10.14-10.81 21.16-20.79 30.83-32.05 10.28-10.1 19.67-21.02 29.49-31.54 26.94-30.26 53.17-61.26 76.78-94.21 9.24-13.65 18.54-27.33 25.97-42.06.92-2.06 1.64-4.21 2.39-6.34-10.03 2.88-18.56 9.14-27.41 14.43-39.57 25.13-75.24 55.75-110.49 86.49-5.51 5.49-11.55 10.4-17.09 15.85-5.25 4.07-9.53 9.2-14.76 13.29-7.87 7.11-14.84 15.18-23.05 21.92l-37.53 37.42c-14.75 16.31-30.44 31.96-42.75 50.31-2.07 3.03-3.51 6.52-6.08 9.19-1.73.61-3.57.73-5.37.94-.21-.07-.63-.23-.84-.31l-4.25-1.56-1.75-.47-3.97-1.17c-3.67-.79-7.61-1.12-11.2.17-.1-4.72 2.12-9 4.1-13.14 9.86-18.08 23.91-33.32 37.35-48.73 5.05-5.24 10.48-10.13 15.01-15.85l28-28.13c9.93-8.4 18.6-18.15 28.14-26.96 5.48-4.09 9.69-9.58 15.09-13.75 4.6-3.76 8.31-8.48 13.09-12.03 39.79-35.51 80.45-70.53 125.54-99.3 12.57-7.67 25.63-15.21 40.16-18.39z"
+								></path>
+								<path
+									fill="var(--clrPrm)"
+									stroke="var(--clrPrm)"
+									d="M143.47 315.74c3.59-1.29 7.53-.96 11.2-.17l3.97 1.17 1.75.47 4.25 1.56.84.31c3.41 2.71 7.71 4.54 9.98 8.45 4.85 3.76 8.96 8.4 13.18 12.84.65 1.31 1.67 2.33 2.98 2.99 2.91 2.47 5.74 5.14 7.67 8.48 1.27 2.17 2.36 4.44 3.46 6.7l1.03 3.1.53 2.66c1.01 3.23.76 6.65.71 9.98l-.94 2.26c-.35 2.29.64 5.01-.94 6.97-.26 1.66.25 3.61-.97 5-.21 1.34-.07 2.81-.89 3.99-.25 1.02-.58 2.02-1 3-.33 1.77-1.17 3.37-2.03 4.94-.42 2.22-1.55 4.18-2.56 6.17-.69 1.32-1.34 2.67-1.95 4.04-2.11 3.81-4.94 7.17-7.02 11-2.89 2.54-4.53 6.13-7.48 8.61-3.03 2.59-5.29 6.17-8.89 8.02l-3.73 3.44c-2.52 1.34-4.77 3.1-7.17 4.62l-2.08.86c-1.96 1.13-3.84 2.4-5.75 3.61-1.38.54-2.75 1.08-4.19 1.42l-1.99 1.06c-1.69.6-3.38 1.18-4.99 1.95-.96.42-1.94.77-2.95 1.05a45.67 45.67 0 0 1-2.99 1.01c-1.51.93-3.32.65-4.99.82-1.1 1.01-2.66.81-4.01 1.08-1.77 1.24-3.99.67-5.99.89-3.91 2.05-8.73.31-13.01.99-1.37 1.27-3.71 1.42-5.03-.01-3.92-.66-8.49 1.08-11.99-.99-1.99-.29-4.37.53-6-.96-1.67-.25-3.62.28-4.99-.95-1.35-.22-2.84-.06-4-.91-1.03-.24-2.03-.56-3-.98-1.03-.25-2.03-.58-3-1-1.02-.26-2.02-.58-2.99-.98-1.77-.36-3.37-1.19-4.95-2.03-2.51-.51-4.72-1.84-6.96-3.01l-2.05-.93c-1.63-1.04-3.21-2.17-4.94-3.05-3.56-1.98-6.68-4.65-10.27-6.57-1.55-1.46-2.93-3.26-5.01-3.99-3.6-3.72-7.71-7.02-10.75-11.23l-.86-3c-1.06-1.8-1.18-4.27.08-6 .18-1.34.3-2.69.73-3.97 1.59-2.35 3.52-4.54 6.04-5.88 2.93-2.11 6.52-1.64 9.91-1.71 2.2-1.85 5.39-.55 8-1.01 1.4-1.19 3.37-.8 4.96-1.57 1.04-.57 2.1-1.12 3.17-1.63 9.87-4.03 15.86-13.35 21.11-22.11.97-1.69 2.09-3.27 3.03-4.97.99-2.53 2.72-4.65 3.99-7.03.97-1.68 2.07-3.28 2.98-5 .97-1.68 2.08-3.28 2.99-4.99 2.74-4.76 6.41-8.89 9.58-13.35 5.16-5.16 10-10.8 16.32-14.57 1.74-.87 3.32-2.02 4.98-3.03 1.61-.77 3.23-1.56 4.79-2.44 1.35-.6 2.71-1.15 4.13-1.56.99-.36 1.99-.69 3-1 1.59-.74 3.47-.52 4.99-1.46 1.35-.29 2.92-.03 4.01-1.08 1.65-.12 3.31-.21 4.96-.39m3.05 28.32c-1.3 1.4-3.34.78-5 1.07-.95.53-1.96.92-3.02 1.18a27.46 27.46 0 0 1-3.05.93l-4.08 1.98c-1.71.96-3.32 2.1-5.03 3.05-7.2 6.34-13.32 13.77-18.12 22.09l-.86 2.07c-1.06 1.63-2.2 3.22-3.12 4.93-.95 2.55-2.74 4.64-3.97 7.04-.98 1.68-2.13 3.26-3.01 5.01-1.37 2.48-3.18 4.7-4.54 7.19-1.43 1.58-3.18 2.98-4.01 5.01-4.37 4.27-8.24 9.29-13.33 12.69-1.25 1.1-2.51 2.21-3.94 3.08-1.47.65-2.93 1.32-4.43 1.91l-.02.47 2.44.89 1.99 1.23 2 .29c.97.52 1.99.88 3.08 1.08l2.05 1.14c1.63.58 3.44.55 4.96 1.43l1.93.35c1.74 1.51 4.41.1 6.07 1.75 3.59.66 7.87-1.1 11.01 1.04 1.67-.11 3.71.59 4.99-.89 3.33-.14 6.65 0 9.98-.14 1.59-1.73 4.34-.18 6.01-1.77l1.99-.32c1.48-1.01 3.39-.71 4.94-1.56 1.62-.76 3.3-1.35 4.97-1.97l5.99-3.03 2.04-.93c9.83-6.22 18.74-14.41 24.29-24.75.55-1.1 1.29-2.08 2.04-3.03.25-1.02.54-2.02.86-3.01l1.15-1.97c.22-1.06.52-2.09.92-3.09.29-1.02.62-2.01 1-2.99.2-1.1.61-2.1 1.21-3.02l.2-3.98c1.8-2.28.57-5.47.89-8.13l-24.39-24.4c-1.7 0-3.39.02-5.08.08z"
+								></path>
+							</svg>
+						</div>
+						<div class="context-menu-text context-menu-one">
+							Personalize
+						</div>
+					</li>
+					<div class="menu-hr"></div>
+					<li onclick="alert('Terminal')">
+						<div class="context-menu-img context-menu-one">
+							<img width="16" src="assets/terminal.png" alt="" />
+						</div>
+						<div class="context-menu-text context-menu-one">
+							Open in Windows Terminal
+						</div>
+					</li>
+					<li data-app="about-app">
+						<div class="context-menu-img context-menu-one">
+							<img width="16" src="assets/info.png" alt="" />
+						</div>
+						<div class="context-menu-text context-menu-one">
+							About
+						</div>
+					</li>
+					<!-- <li onclick="alert('About')"> New</li> -->
+				</ul>
+			</div>
+
+			<div id="custom-menu1" class="context-menu1">
+				<ul>
+					<li onclick="alert('View')">
+						<div class="context-menu-text context-menu-one">
+							Align icons
+						</div>
+						<div class="context-menu-arrow">
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								data-prefix="fas"
+								data-icon="chevron-right"
+								class="svg-inline--fa fa-chevron-right"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="
+									width: 10px;
+									height: 10px;
+									color: rgb(153, 153, 153);
+								"
+							>
+								<path
+									fill="currentColor"
+									d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+								></path>
+							</svg>
+						</div>
+
+						<ul class="align-menu sub-menu">
+							<li>
+								<div class="view-menu-text">Center</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Left</div>
+								<div>.</div>
+							</li>
+						</ul>
+					</li>
+					<div class="menu-hr"></div>
+					<li onclick="alert('Sort by')">
+						<div class="context-menu-text context-menu-one">
+							Search
+						</div>
+						<div class="context-menu-arrow">
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								data-prefix="fas"
+								data-icon="chevron-right"
+								class="svg-inline--fa fa-chevron-right"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="
+									width: 10px;
+									height: 10px;
+									color: rgb(153, 153, 153);
+								"
+							>
+								<path
+									fill="currentColor"
+									d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+								></path>
+							</svg>
+						</div>
+
+						<ul class="search-menu sub-menu">
+							<li>
+								<div class="view-menu-text">Show</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Hide</div>
+								<div>.</div>
+							</li>
+						</ul>
+					</li>
+					<li onclick="alert('Sort by')">
+						<div class="context-menu-text context-menu-one">
+							Widget
+						</div>
+						<div class="context-menu-arrow">
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								data-prefix="fas"
+								data-icon="chevron-right"
+								class="svg-inline--fa fa-chevron-right"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 320 512"
+								data-flip="false"
+								data-invert="false"
+								data-rounded="false"
+								style="
+									width: 10px;
+									height: 10px;
+									color: rgb(153, 153, 153);
+								"
+							>
+								<path
+									fill="currentColor"
+									d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+								></path>
+							</svg>
+						</div>
+
+						<ul class="widget-menu sub-menu">
+							<li>
+								<div class="view-menu-text">Show</div>
+								<div>.</div>
+							</li>
+							<li>
+								<div class="view-menu-text">Hide</div>
+								<div>.</div>
+							</li>
+						</ul>
+					</li>
+					<div class="menu-hr"></div>
+					<li onclick="alert('Sort by')">
+						<div class="context-menu-text context-menu-one">
+							Show Desktop
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="calender">
+				<div class="calender-show-current-dates">
+					<div class="calender-show-date"></div>
+					<div class="calender-closing-arrow">
+						<svg
+							aria-hidden="true"
+							focusable="false"
+							data-prefix="fas"
+							data-icon="chevron-down"
+							class="svg-inline--fa fa-chevron-down"
+							role="img"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+							data-flip="false"
+							data-invert="false"
+							data-rounded="false"
+						>
+							<path
+								fill="currentColor"
+								d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+							></path>
+						</svg>
+					</div>
+				</div>
+
+				<div class="calender-header">
+					<div class="calender-header-month-year"></div>
+					<div class="calender-header-btns">
+						<div class="calender-header-prev-btn">▲</div>
+						<div class="calender-header-next-btn">▼</div>
+					</div>
+				</div>
+
+				<div class="calender-days">
+					<div class="calender-day">Su</div>
+					<div class="calender-day">Mo</div>
+					<div class="calender-day">Tu</div>
+					<div class="calender-day">We</div>
+					<div class="calender-day">Th</div>
+					<div class="calender-day">Fr</div>
+					<div class="calender-day">Sa</div>
+				</div>
+
+				<div class="dates"></div>
+			</div>
+
+			<div class="system-settings-tray">
+				<div class="system-quick-settings">
+					<div class="system-settings-menu">
+						<div class="system-settings-wifi">
+							<div
+								class="system-settings-wifi-symbol system-button"
+							>
+								<img
+									data-invert="true"
+									class="theme-sensitive"
+									src="assets/wifi.png"
+									alt=""
+								/>
+							</div>
+							<div class="system-settings-wifi-heading">WiFi</div>
+						</div>
+
+						<div class="system-settings-bluetooth">
+							<div
+								class="system-settings-bluetooth-symbol system-button"
+							>
+								<img
+									class="theme-sensitive"
+									src="assets/bluetooth.png"
+									alt=""
+								/>
+							</div>
+							<div class="system-settings-bluetooth-heading">
+								Bluetooth
+							</div>
+						</div>
+
+						<div class="system-settings-flightmode">
+							<div
+								class="system-settings-flightmode-symbol system-button"
+							>
+								<img
+									class="theme-sensitive"
+									src="assets/airplane.png"
+									alt=""
+								/>
+							</div>
+							<div class="system-settings-flightmode-heading">
+								Flight Mode
+							</div>
+						</div>
+
+						<div class="system-settings-batterysaver">
+							<div
+								class="system-settings-batterysaver-symbol system-button"
+							>
+								<img
+									class="theme-sensitive"
+									src="assets/saver.png"
+									alt=""
+								/>
+							</div>
+							<div class="system-settings-batterysaver-heading">
+								Battery Saver
+							</div>
+						</div>
+
+						<div class="system-settings-theme theme-toggle">
+							<div
+								class="system-settings-theme-symbol "
+							>
+								<img
+									class="theme-sensitive theme-icon"
+									src="assets/sun.png"
+									alt=""
+								/>
+							</div>
+							<div class="system-settings-theme-heading">
+								Theme
+							</div>
+						</div>
+
+						<div class="system-settings-nightlight">
+							<div
+								class="system-settings-nightlight-symbol system-button"
+							>
+								<img
+									class="theme-sensitive"
+									src="assets/nightlight.png"
+									alt=""
+								/>
+							</div>
+							<div class="system-settings-nightlight-heading">
+								Night Light
+							</div>
+						</div>
+
+					</div>
+					<div class="system-settings-bright">
+						<div class="system-settings-bright-icon">
+							<img
+								class="theme-sensitive"
+								src="assets/brightness.png"
+								alt=""
+							/>
+						</div>
+						<div class="system-settings-bright-progress">
+							<input
+								type="range"
+								id="brightnessSlider"
+								min="10"
+								max="100"
+								value="75"
+							/>
+							<!-- <div class="value" id="brightnessValue">100%</div> -->
+						</div>
+					</div>
+					<div class="system-settings-audio">
+						<div class="system-settings-audio-icon">
+							<img
+								id="volumeImage"
+								src="assets/audio3.png"
+								alt=""
+								class="theme-sensitive"
+							/>
+						</div>
+						<div class="system-settings-audio-progress">
+							<input
+								type="range"
+								id="volumeSlider"
+								min="0"
+								max="100"
+								value="100"
+							/>
+							<!-- <div class="value" id="volumeValue">50%</div> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="system-settings-battery-footer">
+					<div class="system-quick-setting-charging">
+						<!-- <img src="assets/charging.svg" alt=""> -->
+						<svg
+							id="charging-icon-quick-settings"
+							xmlns="http://www.w3.org/2000/svg"
+							width="12"
+							height="12"
+							fill="none"
+							viewBox="0 0 24 24"
+							class="theme-sensitive"
+						>
+							<path
+								fill="#000"
+								stroke="#f3f3f3"
+								stroke-width="2"
+								d="m8.294 14-1.767 7.068c-.187.746.736 1.256 1.269.701L19.79 9.27A.75.75 0 0 0 19.25 8h-4.46l1.672-5.013A.75.75 0 0 0 15.75 2h-7a.75.75 0 0 0-.721.544l-3 10.5A.75.75 0 0 0 5.75 14h2.544Z"
+							></path>
+						</svg>
+					</div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						height="20"
+						width="20"
+						fill="none"
+						viewBox="0 0 24 24"
+						class="theme-sensitive"
+					>
+						<path
+							xmlns="http://www.w3.org/2000/svg"
+							fill="#000"
+							d="M17 6a3 3 0 0 1 3 3v1h1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h12Zm-.002 1.5H5a1.5 1.5 0 0 0-1.493 1.356L3.5 9v6a1.5 1.5 0 0 0 1.355 1.493L5 16.5h11.998a1.5 1.5 0 0 0 1.493-1.355l.007-.145V9a1.5 1.5 0 0 0-1.355-1.493l-.145-.007Z"
+						></path>
+					</svg>
+					<!-- <img src="assets/battery.svg" alt=""> -->
+					<div class="system-quick-settings-full-battery">
+						<!-- <img src="assets/fullbattery.svg" alt=""> -->
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							height="20"
+							width="20"
+							fill="none"
+							viewBox="0 0 24 24"
+							class="theme-sensitive"
+						>
+							<path
+								fill="#000"
+								d="M17 6a3 3 0 0 1 3 3v1h1a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-1v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h12Zm-.002 1.5H5a1.5 1.5 0 0 0-1.494 1.356L3.5 9v6a1.5 1.5 0 0 0 1.355 1.493L5 16.5h11.998a1.5 1.5 0 0 0 1.493-1.355l.007-.145V9a1.5 1.5 0 0 0-1.355-1.493l-.145-.007ZM6 9h10a1 1 0 0 1 .993.883L17 10v4a1 1 0 0 1-.883.993L16 15H6a1 1 0 0 1-.993-.883L5 14v-4a1 1 0 0 1 .883-.993L6 9h10H6Z"
+							></path>
+						</svg>
+					</div>
+
+					<div class="system-quick-charging-level"></div>
+				</div>
+			</div>
+
+			<div class="system-current-running">
+				<div class="active-bluetooth">
+					<img src="assets/bluetooth (1).png" alt="" />
+				</div>
+				<div class="active-defender">
+					<img src="assets/icons8-windows-defender-48.png" alt="" />
+				</div>
+				<div class="active-calculator">
+					<img src="assets/calculator.png" alt="" />
+				</div>
+				<div class="active-notepad">
+					<img src="assets/notepad.png" alt="" />
+				</div>
+			</div>
+
+			<div class="home-full-view">
+				<div class="home-full-view-header">
+					<div class="home-view-header-heading">Pinned</div>
+					<div class="home-view-header-app-btn">All Apps ></div>
+				</div>
+
+				<div class="home-all-apps">
+					<div
+						data-app="explorer"
+						data-icon="assets/user.png"
+						class="home-app-this-pc desktop-app home-app"
+					>
+						<div class="home-app-this-pc-icon home-icon">
+							<img src="assets/user.png" alt="" />
+						</div>
+						<div class="home-app-this-pc-name home-name">
+							This PC
+						</div>
+					</div>
+
+					<div
+						data-app="recycle-bin"
+						data-icon="assets/bin0.png"
+						class="home-app-recycle-bin desktop-app home-app"
+					>
+						<div class="home-app-recycle-bin-icon home-icon">
+							<img src="assets/bin0.png" alt="" />
+						</div>
+						<div class="home-app-recycle-bin-name home-name">
+							Recycle Bin
+						</div>
+					</div>
+
+					<div
+						data-app="store"
+						data-icon="assets/store.png"
+						class="home-app-Store desktop-app home-app"
+					>
+						<div class="home-app-store-icon home-icon">
+							<img src="assets/store.png" alt="" />
+						</div>
+						<div class="home-app-store-name home-name">Store</div>
+					</div>
+
+					<div
+						data-app="explorer"
+						data-icon="assets/explorer.png"
+						class="home-app-explorer desktop-app home-app"
+					>
+						<div class="home-app-explorer-icon home-icon">
+							<img src="assets/explorer.png" alt="" />
+						</div>
+						<div class="home-app-explorer-name home-name">
+							Explorer
+						</div>
+					</div>
+
+					<div
+						data-app="edge"
+						data-icon="assets/edge.png"
+						class="home-app-edge desktop-app home-app"
+					>
+						<div class="home-app-edge-icon home-icon">
+							<img src="assets/edge.png" alt="" />
+						</div>
+						<div class="homr-app-edge-name home-name">Edge</div>
+					</div>
+
+					<div
+						data-app="terminal"
+						data-icon="assets/terminal.png"
+						class="home-app-terminal desktop-app home-app"
+					>
+						<div class="home-app-terminal-icon home-icon">
+							<img src="assets/terminal.png" alt="" />
+						</div>
+						<div class="home-app-terminal-name home-name">
+							Terminal
+						</div>
+					</div>
+
+					<div
+						data-app="github"
+						data-icon="assets/github.png"
+						class="home-app-github desktop-app home-app"
+					>
+						<div class="home-app-github-icon home-icon">
+							<img src="assets/github.png" alt="" />
+						</div>
+						<div class="home-app-github-name home-name">Github</div>
+					</div>
+
+					<div
+						data-app="notepad"
+						data-icon="assets/notepad.png"
+						class="home-app-notepad desktop-app home-app"
+					>
+						<div class="home-app-notepad-icon home-icon">
+							<img src="assets/notepad.png" alt="" />
+						</div>
+						<div class="home-app-notepad-name home-name">
+							Notepad
+						</div>
+					</div>
+
+					<div
+						data-app="settings"
+						data-icon="assets/settings.png"
+						class="home-app-settings desktop-app home-app"
+					>
+						<div class="home-app-settings-icon home-icon">
+							<img src="assets/settings.png" alt="" />
+						</div>
+						<div class="home-app-settings-name home-name">
+							Settings
+						</div>
+					</div>
+
+					<div
+						data-app="camera"
+						data-icon="assets/camera.png"
+						class="home-app-camera desktop-app home-app"
+					>
+						<div class="home-app-camera-icon home-icon">
+							<img src="assets/camera.png" alt="" />
+						</div>
+						<div class="home-app-camera-name home-name">Camera</div>
+					</div>
+
+					<div
+						data-app="getstarted"
+						data-icon="assets/getstarted.png"
+						class="home-app-getstarted desktop-app home-app"
+					>
+						<div class="home-app-getstarted-icon home-icon">
+							<img src="assets/getstarted.png" alt="" />
+						</div>
+						<div class="home-app-getstarted-name home-name">
+							Get Started
+						</div>
+					</div>
+
+					<div
+						data-app="board"
+						data-icon="assets/board.png"
+						class="home-app-board desktop-app home-app"
+					>
+						<div class="home-app-board-icon home-icon">
+							<img src="assets/board.png" alt="" />
+						</div>
+						<div class="home-app-board-name home-name">
+							White Board
+						</div>
+					</div>
+
+					<div
+						data-app="taskmanager"
+						data-icon="assets/taskmanager.png"
+						class="home-app-taskmanager desktop-app home-app"
+					>
+						<div class="home-app-taskmanager-icon home-icon">
+							<img src="assets/taskmanager.png" alt="" />
+						</div>
+						<div class="home-app-taskmanager-name home-name">
+							Task Manager
+						</div>
+					</div>
+
+					<div
+						data-app="calculator"
+						data-icon="assets/calculator.png"
+						class="home-app-calculator desktop-app home-app"
+					>
+						<div class="home-app-calculator-icon home-icon">
+							<img src="assets/calculator.png" alt="" />
+						</div>
+						<div class="home-app-calculator-name home-name">
+							Calculator
+						</div>
+					</div>
+
+					<div
+						data-app="mail"
+						data-icon="assets/mail.png"
+						class="home-app-mail desktop-app home-app"
+					>
+						<div class="home-app-mail-icon home-icon">
+							<img src="assets/mail.png" alt="" />
+						</div>
+						<div class="home-app-mail-name home-name">Mail</div>
+					</div>
+
+					<a
+						target="_blank"
+						href="https://www.linkedin.com/in/pardeepshyoran"
+						data-icon="assets/linkedin.png"
+						class="home-app-linkedin home-app"
+					>
+						<div class="home-app-likedin-icon home-icon">
+							<img src="assets/linkedin.png" alt="" />
+						</div>
+						<div class="home-app-linkedin-name home-name">
+							Linkedin
+						</div>
+					</a>
+
+					<a
+						target="_blank"
+						href="https://www.x.com/pardeepshyoran"
+						data-icon="assets/x.png"
+						class="home-app-x home-app"
+					>
+						<div class="home-app-x-icon home-icon">
+							<img src="assets/x.png" alt="" />
+						</div>
+						<div class="home-app-x-name home-name">X</div>
+					</a>
+
+					<a
+						target="_blank"
+						href="https://discord.com/users/pardeep_shyoran"
+						data-icon="assets/discord.png"
+						class="home-app-discord home-app"
+					>
+						<div class="home-app-discord-icon home-icon">
+							<img src="assets/discord.png" alt="" />
+						</div>
+						<div class="home-app-discord-name home-name">
+							Discord
+						</div>
+					</a>
+				</div>
+
+				<div class="recommonded-home">
+					<h1 class="recommonded-home-heading">Recommended</h1>
+					<div class="recommended-home-apps">
+						<div
+							data-app="mail"
+							data-icon="assets/mail.png"
+							class="recomm-app-mail desktop-app recomm-app"
+						>
+							<div class="recomm-app-mail-icon recomm-icon">
+								<img src="assets/mail.png" alt="" />
+							</div>
+							<div class="recomm-app-mail-name recomm-name">
+								Mail
+							</div>
+						</div>
+
+						<a
+							target="_blank"
+							href="https://www.linkedin.com/in/pardeepshyoran"
+							data-icon="assets/linkedin.png"
+							class="recomm-app-linkedin recomm-app"
+						>
+							<div class="recomm-app-likedin-icon recomm-icon">
+								<img src="assets/linkedin.png" alt="" />
+							</div>
+							<div class="recomm-app-linkedin-name recomm-name">
+								Linkedin
+							</div>
+						</a>
+
+						<div
+							data-app="terminal"
+							data-icon="assets/terminal.png"
+							class="recomm-app-terminal desktop-app recomm-app"
+						>
+							<div class="recomm-app-terminal-icon recomm-icon">
+								<img src="assets/terminal.png" alt="" />
+							</div>
+							<div class="recomm-app-terminal-name recomm-name">
+								Terminal
+							</div>
+						</div>
+
+						<a
+							target="_blank"
+							href="https://www.x.com/pardeepshyoran"
+							data-icon="assets/x.png"
+							class="recomm-app-x recomm-app"
+						>
+							<div class="recomm-app-x-icon recomm-icon">
+								<img src="assets/x.png" alt="" />
+							</div>
+							<div class="recomm-app-x-name recomm-name">X</div>
+						</a>
+
+						<div
+							data-app="github"
+							data-icon="assets/github.png"
+							class="recomm-app-github desktop-app recomm-app"
+						>
+							<div class="recomm-app-github-icon recomm-icon">
+								<img src="assets/github.png" alt="" />
+							</div>
+							<div class="recomm-app-github-name recomm-name">
+								Github
+							</div>
+						</div>
+
+						<a
+							target="_blank"
+							href="https://discord.com/users/pardeep_shyoran"
+							data-icon="assets/discord.png"
+							class="recomm-app-discord recomm-app"
+						>
+							<div class="recomm-app-discord-icon recomm-icon">
+								<img src="assets/discord.png" alt="" />
+							</div>
+							<div class="recomm-app-discord-name recomm-name">
+								Discord
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="menu-hr"></div>
+				<div class="home-full-view-footer">
+					<div class="windows-user-profile">
+						<div class="windows-profile-img">
+							<img src="assets/sheryians.webp" alt="" />
+						</div>
+						<div class="windows-profile-name">Pardeep Shyoran</div>
+					</div>
+					<div class="windows-pwr-btn">
+						<svg
+							width="20"
+							height="20"
+							fill="none"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							data-action="STARTPWC"
+						>
+							<path
+								d="M8.204 4.82a.75.75 0 0 1 .634 1.36A7.51 7.51 0 0 0 4.5 12.991c0 4.148 3.358 7.51 7.499 7.51s7.499-3.362 7.499-7.51a7.51 7.51 0 0 0-4.323-6.804.75.75 0 1 1 .637-1.358 9.01 9.01 0 0 1 5.186 8.162c0 4.976-4.029 9.01-9 9.01C7.029 22 3 17.966 3 12.99a9.01 9.01 0 0 1 5.204-8.17ZM12 2.496a.75.75 0 0 1 .743.648l.007.102v7.5a.75.75 0 0 1-1.493.102l-.007-.102v-7.5a.75.75 0 0 1 .75-.75Z"
+								fill="currentColor"
+							></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+			<div class="search-full-view">
+				<div class="search-bar">
+					<input
+						type="text"
+						id="searchInput"
+						placeholder="Type here to search..."
+					/>
+					<div class="search-icon">
+						<img
+							class="theme-sensitive"
+							src="assets/search.png"
+							alt=""
+						/>
+					</div>
+				</div>
+
+				<ul id="search-results" class="search-results"></ul>
+
+				<div class="search-top-apps">
+					<div class="top-apps-heading">Top Apps</div>
+
+					<div class="top-apps">
+						<div
+							data-app="explorer"
+							data-icon="assets/explorer.png"
+							class="top-app-explorer desktop-app top-app"
+						>
+							<div class="top-app-explorer-icon top-icon">
+								<img src="assets/explorer.png" alt="" />
+							</div>
+							<div class="top-app-explorer-name top-name">
+								Explorer
+							</div>
+						</div>
+
+						<div
+							data-app="terminal"
+							data-icon="assets/terminal.png"
+							class="top-app-terminal desktop-app top-app"
+						>
+							<div class="top-app-terminal-icon top-icon">
+								<img src="assets/terminal.png" alt="" />
+							</div>
+							<div class="top-app-terminal-name top-name">
+								Terminal
+							</div>
+						</div>
+
+						<div
+							data-app="edge"
+							data-icon="assets/edge.png"
+							class="top-app-edge desktop-app top-app"
+						>
+							<div class="top-app-edge-icon top-icon">
+								<img src="assets/edge.png" alt="" />
+							</div>
+							<div class="top-app-edge-name top-name">Edge</div>
+						</div>
+
+						<div
+							data-app="notepad"
+							data-icon="assets/notepad.png"
+							class="top-app-notepad desktop-app top-app"
+						>
+							<div class="top-app-notepad-icon top-icon">
+								<img src="assets/notepad.png" alt="" />
+							</div>
+							<div class="top-app-notepad-name top-name">
+								Notepad
+							</div>
+						</div>
+
+						<a
+							target="_blank"
+							href="https://www.linkedin.com/in/pardeepshyoran"
+							data-icon="assets/linkedin.png"
+							class="top-app-linkedin top-app"
+						>
+							<div class="top-app-likedin-icon top-icon">
+								<img src="assets/linkedin.png" alt="" />
+							</div>
+							<div class="top-app-linkedin-name top-name">
+								Linkedin
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="taskbar-left-widget">
+				<div class="taskbar-left-widget-settings">
+					<svg
+						aria-hidden="true"
+						focusable="false"
+						data-prefix="fas"
+						data-icon="ellipsis"
+						class="svg-inline--fa fa-ellipsis"
+						role="img"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 448 512"
+						data-flip="false"
+						data-invert="false"
+						data-rounded="false"
+						style="width: 12px; height: 12px"
+					>
+						<path
+							fill="currentColor"
+							d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"
+						></path>
+					</svg>
+				</div>
+				<div class="taskbar-left-widget-time">
+					<div class="taskbar-left-widget-clock"></div>
+					<div class="taskbar-left-widget-date"></div>
+				</div>
+				<div class="taskbar-left-widget-stories">
+					<div class="app-body">
+						<div class="window-app-heading">Stories</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="desktop-apps" class="desktop-apps">
+				<div
+					data-app="explorer"
+					data-icon="assets/user.png"
+					class="desktop-app-this-pc desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-this-pc-icon icon">
+						<img src="assets/user.png" alt="" />
+					</div>
+					<div class="desktop-app-this-pc-name name">This PC</div>
+				</div>
+
+				<div
+					data-app="recycle-bin"
+					data-icon="assets/bin0.png"
+					class="desktop-app-recycle-bin desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-recycle-bin-icon icon">
+						<img src="assets/bin0.png" alt="" />
+					</div>
+					<div class="desktop-app-recycle-bin-name name">
+						Recycle Bin
+					</div>
+				</div>
+
+				<div
+					data-app="store"
+					data-icon="assets/store.png"
+					class="desktop-app-Store desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-store-icon icon">
+						<img src="assets/store.png" alt="" />
+					</div>
+					<div class="desktop-app-store-name name">Store</div>
+				</div>
+
+				<div
+					data-app="explorer"
+					data-icon="assets/explorer.png"
+					class="desktop-app-explorer desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-explorer-icon icon">
+						<img src="assets/explorer.png" alt="" />
+					</div>
+					<div class="desktop-app-explorer-name name">Explorer</div>
+				</div>
+
+				<div
+					data-app="edge"
+					data-icon="assets/edge.png"
+					class="desktop-app-edge desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-edge-icon icon">
+						<img src="assets/edge.png" alt="" />
+					</div>
+					<div class="desktop-app-edge-name name">Edge</div>
+				</div>
+
+				<div
+					data-app="terminal"
+					data-icon="assets/terminal.png"
+					class="desktop-app-terminal desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-terminal-icon icon">
+						<img src="assets/terminal.png" alt="" />
+					</div>
+					<div class="desktop-app-terminal-name name">Terminal</div>
+				</div>
+
+				<div
+					data-app="github"
+					data-icon="assets/github.png"
+					class="desktop-app-github desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-github-icon icon">
+						<img src="assets/github.png" alt="" />
+					</div>
+					<div class="desktop-app-github-name name">Github</div>
+				</div>
+
+				<div
+					data-app="notepad"
+					data-icon="assets/notepad.png"
+					class="desktop-app-notepad desktop-app desktop-app-main"
+				>
+					<div class="desktop-app-notepad-icon icon">
+						<img src="assets/notepad.png" alt="" />
+					</div>
+					<div class="desktop-app-notepad-name name">Notepad</div>
+				</div>
+			</div>
+
+			<div class="all-apps">
+				
+				<div
+					id="window-terminal"
+					class="app-window hidden"
+					data-app="terminal"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/terminal.png" alt="" />
+							</div>
+							<div class="app-window-name">Terminal</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div id="terminal">
+						<div class="terminal-intro">
+							<div>🌹 Welcome to Terminal 🌹</div>
+							<div>🌹 Created by Pardeep Shyoran 🌹</div>
+							<div>Type `help`, to view all commands...</div>
+						</div>
+						<div id="output"></div>
+						<div id="input-line">
+							<span class="prompt">$</span>
+							<input type="text" id="input" autofocus />
+						</div>
+					</div>
+
+					<!-- Add this inside the <body>, after the terminal -->
+					<div id="editor-modal" style="display: none">
+						<div
+							style="
+								background: black;
+								color: white;
+								padding: 10px;
+								border: 1px solid lime;
+							"
+						>
+							<h3>
+								Edit File: <span id="editor-filename"></span>
+							</h3>
+							<textarea
+								id="editor-textarea"
+								style="width: 100%; height: 150px"
+							></textarea>
+							<br />
+							<button onclick="saveEdit()">Save</button>
+							<button onclick="cancelEdit()">Cancel</button>
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-recycle-bin"
+					class="app-window hidden"
+					data-app="recycle-bin"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/bin0.png" alt="" />
+							</div>
+							<div class="app-window-name">Recycle Bin</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div
+						class="explorer-body"
+						style="display: flex; height: 100%"
+					>
+						<!-- Left Sidebar -->
+						<div
+							id="explorer-sidebar"
+							style="
+								width: 200px;
+								border-right: 1px solid gray;
+								padding: 10px;
+							"
+						>
+							<h3 style="margin-top: 0">Quick Access</h3>
+							<ul id="quick-access">
+								<li class="explorer-sidebar-li" data-path="/">
+									<div class="explorer-sidebar-icon">
+										<img src="assets/bin0.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Recycle Bin
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Right Content Panel -->
+						<div
+							id="recycle-bin-content"
+							style="flex: 1; padding: 10px"
+						>
+							<div
+								id="recycle-bin-path"
+								style="margin-bottom: 10px"
+							>
+								/
+							</div>
+							<ul id="recycle-bin-list">
+								Recycle Bin
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-explorer"
+					class="app-window hidden"
+					data-app="explorer"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/explorer.png" alt="" />
+							</div>
+							<div class="app-window-name">File Explorer</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div
+						class="explorer-body"
+						style="display: flex; height: 100%"
+					>
+						<!-- Left Sidebar -->
+						<div
+							id="explorer-sidebar"
+							style="
+								width: 200px;
+								border-right: 1px solid gray;
+								padding: 10px;
+							"
+						>
+							<h3 style="margin-top: 0">Quick Access</h3>
+							<ul id="quick-access">
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/desktop"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/desk-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Desktop
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/documents"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/docs-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Documents
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/downloads"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/down-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Downloads
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/pictures"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/pics-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Pictures
+									</div>
+								</li>
+								<li
+									class="explorer-sidebar-li"
+									data-path="/home/user/music"
+								>
+									<div class="explorer-sidebar-icon">
+										<img src="assets/music-sm.png" alt="" />
+									</div>
+									<div class="explorer-sidebar-name">
+										Music
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Right Content Panel -->
+						<div
+							id="explorer-content"
+							style="flex: 1; padding: 10px"
+						>
+							<div id="explorer-path" style="margin-bottom: 10px">
+								/
+							</div>
+							<div style="margin-bottom: 10px">
+								<button
+									id="new-folder-btn"
+									style="
+										padding: 5px 10px;
+										background-color: #0078d7;
+										color: white;
+										border: none;
+										border-radius: 3px;
+										cursor: pointer;
+									"
+								>
+									➕ New Folder
+								</button>
+								<button
+									id="new-file-btn"
+									style="
+										padding: 5px 10px;
+										background-color: #0078d7;
+										color: white;
+										border: none;
+										border-radius: 3px;
+										cursor: pointer;
+									"
+								>
+									➕ New File
+								</button>
+							</div>
+							<ul id="explorer-list"></ul>
+						</div>
+					</div>
+				</div>
+
+				<div id="window-edge" class="app-window hidden" data-app="edge">
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/edge.png" alt="" />
+							</div>
+							<div class="app-window-name">Microsoft Edge</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="browser-body" id="mainView">
+						<div class="search-header">
+							<input
+								class="browser-search-bar"
+								type="text"
+								id="query"
+								placeholder="Search here..."
+							/>
+							<button
+								class="browser-search-btn"
+								onclick="search()"
+							>
+								Search
+							</button>
+						</div>
+
+						<div
+							id="loader"
+							class="loader"
+							style="display: none"
+						></div>
+
+						<div
+							class="browser-results"
+							id="resultsContainer"
+						></div>
+
+						<div class="pagination">
+							<button
+								onclick="changePage(-1)"
+								id="prevBtn"
+								disabled
+							>
+								Previous
+							</button>
+							<button
+								onclick="changePage(1)"
+								id="nextBtn"
+								disabled
+							>
+								Next
+							</button>
+						</div>
+					</div>
+
+					<div id="iframeView" style="display: none">
+						<button class="go-back-btn" onclick="goBack()">
+							← Back to results
+						</button>
+						<iframe id="internalIframe"></iframe>
+					</div>
+
+					<!-- <div class="gcse-search"></div> -->
+				</div>
+
+				<div
+					id="window-store"
+					class="app-window hidden"
+					data-app="store"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/store.png" alt="" />
+							</div>
+							<div class="app-window-name">Microsoft Store</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Microsoft Store</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-github"
+					class="app-window hidden"
+					data-app="github"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/github.png" alt="" />
+							</div>
+							<div class="app-window-name">GitHub</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Github</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+
+				<div
+					id="window-settings"
+					class="app-window hidden"
+					data-app="settings"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/settings.png" alt="" />
+							</div>
+							<div class="app-window-name">Settings</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="settings-body">
+						
+						<div class="settings-container">
+							<!-- Sidebar -->
+							<aside class="sidebar">
+							  <ul>
+								<li class="sidebar-item active" data-section="system">System</li>
+								<li class="sidebar-item" data-section="personalization">Personalization</li>
+								<li class="sidebar-item" data-section="network">Network</li>
+								<li class="sidebar-item" data-section="about">About</li>
+							  </ul>
+							</aside>
+						  
+							<!-- Main Content -->
+							<main class="content-area">
+
+							  <div class="settings-section active" id="system">
+								<h2>System Settings</h2>
+								<p>Display, sound, notifications, power options.</p>
+							  </div>
+
+							  <div class="settings-section personalization" id="personalization">
+								<h2>Personalization</h2>
+								<h3>Wallpapers</h3>
+								<div class="mul-wallpapers">
+									<div class="wallpaper wallpaper-1">
+										<img src="assets/Img0.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-2">
+										<img src="assets/img1.jpg" alt="">
+									</div>
+									<div class="wallpaper wallpaper-3">
+										<img src="assets/img2.jpg" alt="">
+									</div>
+									<div class="wallpaper wallpaper-4">
+										<img src="assets/img3.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-5">
+										<img src="assets/img4.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-6">
+										<img src="assets/img5.jpg"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-7">
+										<img src="assets/img6.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-8">
+										<img src="assets/img7.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-9">
+										<img src="assets/img8.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-10">
+										<img src="assets/img9.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-11">
+										<img src="assets/img10.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-12">
+										<img src="assets/img11.webp"  alt="">
+									</div>
+									<div class="wallpaper wallpaper-13">
+										<img src="assets/img12.webp" alt="">
+									</div>
+									<div class="wallpaper wallpaper-14">
+										<img src="assets/img13.webp" alt="">
+									</div>
+									<div class="wallpaper wallpaper-15">
+										<img src="assets/img14.jpg" alt="">
+									</div>
+									<div class="wallpaper wallpaper-16">
+										<img src="assets/img15.jpg" alt="">
+									</div>
+								</div>
+
+								<div class="wallpaper-section">
+									<label for="wallpaperUrl">Enter wallpaper URL:</label>
+									<input type="text" id="wallpaperUrl" placeholder="https://example.com/image.jpg" />
+									<div class="wallpaper-buttons">
+									  <button id="setWallpaperBtn">Set Wallpaper</button>
+									  <button id="resetWallpaperBtn">Reset</button>
+									</div>
+								  </div>
+								  
+																	
+
+								<!-- New theme dropdown -->
+								<div class="settings-option">
+									<label for="theme-select">Theme:</label>
+									<select id="theme-select">
+									  <option value="light">Light</option>
+									  <option value="dark">Dark</option>
+									</select>
+								  </div>
+  
+							  </div>
+
+							  <div class="settings-section" id="network">
+								<h2>Network</h2>
+								<p>Wi-Fi, Ethernet, VPN connections.</p>
+							  </div>
+
+							  <div class="settings-section" id="about">
+								<h2>About</h2>
+								<p>System info, OS version, hardware specs.</p>
+							  </div>
+
+							</main>
+						  </div>
+						  
+						  
+
+					</div>
+				</div>
+
+				<div
+					id="window-calculator"
+					class="app-window hidden"
+					data-app="calculator"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/calculator.png" alt="" />
+							</div>
+							<div class="app-window-name">Calculator</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Calculator</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-mail"
+					class="app-window hidden"
+					data-app="mail"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/mail.png" alt="" />
+							</div>
+							<div class="app-window-name">Mail</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Mail</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+		
+
+				<div
+					id="window-taskmanager"
+					class="app-window hidden"
+					data-app="taskmanager"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/taskmanager.png" alt="" />
+							</div>
+							<div class="app-window-name">Task Manager</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Task Manager</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-board"
+					class="app-window hidden"
+					data-app="board"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/board.png" alt="" />
+							</div>
+							<div class="app-window-name">White Board</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">White Board</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-getstarted"
+					class="app-window hidden"
+					data-app="getstarted"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/getstarted.png" alt="" />
+							</div>
+							<div class="app-window-name">Get Started</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Get Started</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					id="window-camera"
+					class="app-window hidden"
+					data-app="camera"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/camera.png" alt="" />
+							</div>
+							<div class="app-window-name">Camera</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="app-body">
+						<div class="window-app-heading">Camera</div>
+						<div class="coming-soon-img">
+							<img src="assets/coming-soon.png" alt="" />
+						</div>
+					</div>
+				</div>
+
+				
+				<div
+					id="window-notepad"
+					class="app-window hidden"
+					data-app="notepad"
+				>
+					<div class="app-window-header">
+						<div class="app-window-main">
+							<div class="app-window-icon">
+								<img src="assets/notepad.png" alt="" />
+							</div>
+							<div class="app-window-name">Notepad</div>
+						</div>
+						<div class="app-window-btn">
+							<button class="minimise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/minimize.png"
+									alt=""
+								/>
+							</button>
+							<button class="maximise-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/maxmin.png"
+									alt=""
+								/>
+							</button>
+							<button class="close-btn window-btns">
+								<img
+									class="theme-sensitive window-btn"
+									src="assets/close.png"
+									alt=""
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="notepad-body">
+						<div class="notepad-toolbar">
+							<button id="newFile">New</button>
+							<button id="renameFile">Rename</button>
+							<button id="deleteFile">Delete</button>
+							<button id="saveNote">Save</button>
+							<button id="clearNote">Clear</button>
+						</div>
+						<div class="notepad-format-toolbar">
+							<button data-cmd="bold"><b>B</b></button>
+							<button data-cmd="italic"><i>I</i></button>
+							<button data-cmd="underline"><u>U</u></button>
+							<button data-cmd="formatBlock" data-value="h1">
+								H1
+							</button>
+							<button data-cmd="formatBlock" data-value="p">
+								P
+							</button>
+
+							<!-- Font Size Dropdown -->
+							<select id="fontSizeSelector">
+								<option value="1">Size 1</option>
+								<option value="2">Size 2</option>
+								<option value="3" selected>
+									Size 3 (default)
+								</option>
+								<option value="4">Size 4</option>
+								<option value="5">Size 5</option>
+								<option value="6">Size 6</option>
+								<option value="7">Size 7</option>
+							</select>
+
+							<!-- Text Color Picker -->
+							<input
+								type="color"
+								id="textColorPicker"
+								title="Text Color"
+							/>
+						</div>
+
+						<div
+							id="notepadContent"
+							class="editable"
+							contenteditable="true"
+							placeholder="Start typing..."
+						></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+		<!-- DOCX Reader -->
+		<script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+		<script>
+			pdfjsLib.GlobalWorkerOptions.workerSrc =
+				"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+		</script>
+
+		<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
